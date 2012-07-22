@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.github.funthomas424242</groupId>
+		<artifactId>eclipseroot</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>com.github.funthomas424242.eclipseconfigurator</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<name>Eclipse Konfigurator</name>
+	<url>https://github.com/FunThomas424242/eclipseconfigurator</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.picocontainer</groupId>
+			<artifactId>picocontainer</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>cuke4duke</groupId>
+			<artifactId>cuke4duke</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${project.build.tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+			<plugin>
+				<groupId>cuke4duke</groupId>
+				<artifactId>cuke4duke-maven-plugin</artifactId>
+				<version>0.4.4</version>
+				<configuration>
+					<features>src/main/resources</features>
+					<jvmArgs>
+						<jvmArg>
+							-Dcuke4duke.objectFactory=cuke4duke.internal.jvmclass.PicoFactory
+						</jvmArg>
+						<jvmArg>-Dfile.encoding=UTF-8</jvmArg>
+					</jvmArgs>
+					<!-- You may not need all of these arguments in your own project. We 
+						have a lot here for testing purposes... -->
+					<cucumberArgs>
+						<cucumberArg>--backtrace</cucumberArg>
+						<cucumberArg>--color</cucumberArg>
+						<cucumberArg>--verbose</cucumberArg>
+						<cucumberArg>--format</cucumberArg>
+						<cucumberArg>pretty</cucumberArg>
+						<cucumberArg>--format</cucumberArg>
+						<cucumberArg>junit</cucumberArg>
+						<cucumberArg>--out</cucumberArg>
+						<cucumberArg>${project.build.directory}/cucumber-reports</cucumberArg>
+						<cucumberArg>--require</cucumberArg>
+						<cucumberArg>${basedir}/target/test-classes</cucumberArg>
+					</cucumberArgs>
+					<gems>
+						<gem>install cuke4duke --version 0.3.2</gem>
+					</gems>
+				</configuration>
+				<executions>
+					<execution>
+						<id>run-features</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>cucumber</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

@@ -77,7 +77,7 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>../eclipseconfigurator/pom.xml</module>
+		<module>eclipseconfigurator/pom.xml</module>
 	</modules>
 
 
