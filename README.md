@@ -1,7 +1,7 @@
 eclipseroot
 ===========
 
-Root for all of my eclipse plugins.
+Root for all of my eclipse plugins: [ElipseConfigurator](https://github.com/FunThomas424242/eclipseconfigurator)
 
 **Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/)
 
