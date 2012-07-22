@@ -17,16 +17,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.picocontainer</groupId>
-			<artifactId>picocontainer</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>cuke4duke</groupId>
-			<artifactId>cuke4duke</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
@@ -47,47 +37,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.5</version>
-			</plugin>
-			<plugin>
-				<groupId>cuke4duke</groupId>
-				<artifactId>cuke4duke-maven-plugin</artifactId>
-				<version>0.4.4</version>
-				<configuration>
-					<features>src/main/resources</features>
-					<jvmArgs>
-						<jvmArg>
-							-Dcuke4duke.objectFactory=cuke4duke.internal.jvmclass.PicoFactory
-						</jvmArg>
-						<jvmArg>-Dfile.encoding=UTF-8</jvmArg>
-					</jvmArgs>
-					<!-- You may not need all of these arguments in your own project. We 
-						have a lot here for testing purposes... -->
-					<cucumberArgs>
-						<cucumberArg>--backtrace</cucumberArg>
-						<cucumberArg>--color</cucumberArg>
-						<cucumberArg>--verbose</cucumberArg>
-						<cucumberArg>--format</cucumberArg>
-						<cucumberArg>pretty</cucumberArg>
-						<cucumberArg>--format</cucumberArg>
-						<cucumberArg>junit</cucumberArg>
-						<cucumberArg>--out</cucumberArg>
-						<cucumberArg>${project.build.directory}/cucumber-reports</cucumberArg>
-						<cucumberArg>--require</cucumberArg>
-						<cucumberArg>${basedir}/target/test-classes</cucumberArg>
-					</cucumberArgs>
-					<gems>
-						<gem>install cuke4duke --version 0.3.2</gem>
-					</gems>
-				</configuration>
-				<executions>
-					<execution>
-						<id>run-features</id>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>cucumber</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
