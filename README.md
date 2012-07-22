@@ -3,7 +3,7 @@ eclipseroot
 
 Root for all of my eclipse plugins.
 
-**Build on Jenkins**: 
+**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/)
 
 **Project Site:** http://funthomas424242.github.com/eclipseroot
 

@@ -3,9 +3,9 @@ eclipseconfigurator
 
 Ein Projekt zum Herstellen identischer Entwicklungsumgebungen.
 
-**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/eclipseconfigurator/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/eclipseconfigurator/)
+**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/com.github.funthomas424242$com.github.funthomas424242.eclipseconfigurator/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/com.github.funthomas424242$com.github.funthomas424242.eclipseconfigurator/)
 
-**Project Site:** http://funthomas424242.github.com/eclipseconfigurator
+**Project Site:** http://funthomas424242.github.com/eclipseroot/eclipseconfigurator
 
 Maven Repositories
 ------------------

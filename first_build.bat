@@ -1,0 +1,1 @@
+mvn integration-test -Dcucumber.installGems=true
