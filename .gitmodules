@@ -1,0 +1,6 @@
+﻿[submodule "eclipseconfigurator"]
+        path = eclipseconfigurator
+        url = git@github.com:FunThomas424242/eclipseconfigurator.git
+[submodule "eclipseroot"]
+        path = eclipseroot
+        url = git@github.com:FunThomas424242/eclipseroot.git
