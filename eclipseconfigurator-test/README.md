@@ -5,7 +5,7 @@ Ein Projekt zum Testen des eclipseconfigurator Projektes mittels Cucumber.
 
 **Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/com.github.funthomas424242$eclipseconfigurator-test/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/com.github.funthomas424242$eclipseconfigurator-test/)
 
-**Project Site:** http://funthomas424242.github.com/eclipseroot/eclipseconfigurator-test
+**Project Site:** https://github.com/FunThomas424242/eclipseroot
 
 Maven Repositories
 ------------------
