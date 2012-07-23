@@ -84,5 +84,19 @@
          </toolbar>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
+            id="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
+            name="Eclipse Configurator">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="eclipseconfigurator.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
 
 </plugin>
