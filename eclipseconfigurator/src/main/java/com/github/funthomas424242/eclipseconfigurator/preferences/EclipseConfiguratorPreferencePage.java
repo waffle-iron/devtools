@@ -1,11 +1,13 @@
-package eclipseconfigurator.preferences;
+package com.github.funthomas424242.eclipseconfigurator.preferences;
 
 import org.eclipse.jface.preference.*;
+import org.eclipse.swt.SWT;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.internal.wizards.preferences.PreferencesContentProvider;
 
 import com.github.funthomas424242.eclipseconfigurator.Activator;
+import com.github.funthomas424242.swtextensions.preferences.NewFileFieldEditor;
 
 /**
  * This class represents a preference page that is contributed to the
@@ -33,10 +35,11 @@ public class EclipseConfiguratorPreferencePage extends
 	 * editor knows how to save and restore itself.
 	 */
 	public void createFieldEditors() {
-		final ECFileFieldEditor exchangeFile = new ECFileFieldEditor(
+		final NewFileFieldEditor exchangeFile = new NewFileFieldEditor(
 				PreferenceConstants.P_FILE, "&Default exchange file:",
 				getFieldEditorParent());
 		exchangeFile.setFileExtensions(PreferenceConstants.FILE_EXTENSIONS);
+		setErrorMessage(null);
 		addField(exchangeFile);
 
 		// addField(new BooleanFieldEditor(PreferenceConstants.P_BOOLEAN,
@@ -57,6 +60,7 @@ public class EclipseConfiguratorPreferencePage extends
 	 * org.eclipse.ui.IWorkbenchPreferencePage#init(org.eclipse.ui.IWorkbench)
 	 */
 	public void init(IWorkbench workbench) {
+
 	}
 
 }

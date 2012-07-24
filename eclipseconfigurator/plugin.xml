@@ -87,7 +87,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
+            class="com.github.funthomas424242.eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
             id="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
             name="Eclipse Configurator">
       </page>
@@ -95,7 +95,7 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="eclipseconfigurator.preferences.PreferenceInitializer">
+            class="com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceInitializer">
       </initializer>
    </extension>
 
