@@ -98,5 +98,23 @@
             class="com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferenceTransfer">
+      <settingsTransfer
+            class="eclipseconfigurator.SettingsTransfer1"
+            id="eclipseconfigurator.settingsTransfer1"
+            name="name">
+         <description>
+            description body text
+         </description>
+      </settingsTransfer>
+      <transfer
+            id="eclipseconfigurator.transfer1"
+            name="name">
+         <mapping
+               scope="eclipseconfigurator.mapping1">
+         </mapping>
+      </transfer>
+   </extension>
 
 </plugin>

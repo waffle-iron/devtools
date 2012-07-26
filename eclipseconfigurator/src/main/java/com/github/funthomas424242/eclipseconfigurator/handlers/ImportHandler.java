@@ -19,6 +19,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import com.github.funthomas424242.eclipseconfigurator.Activator;
+import com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceConstants;
 
 /**
  * Our sample handler extends AbstractHandler, an IHandler base class.
@@ -40,38 +41,40 @@ public class ImportHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow window = HandlerUtil
 				.getActiveWorkbenchWindowChecked(event);
-		String[] fileExtensions = { "*.*" };
+
 		final File exchangeFile = browseFile(window.getShell(), null, null,
-				fileExtensions);
-
-		final boolean doIt = MessageDialog
-				.openConfirm(
-						window.getShell(),
-						"Eclipseconfigurator",
-						"Danger!\n Your current settings (all settings and in a global scope) will be overidden\n"
-								+ " with the setting from the imported settings file: "
-								+ exchangeFile.getAbsolutePath());
-
-		if (doIt) {
-
-			IPreferencesService service = Platform.getPreferencesService();
-
-			try {
-
-				final FileInputStream fileInputStream = new FileInputStream(
-						exchangeFile);
-				final IStatus status = service
-						.importPreferences(fileInputStream);
-				if (status.isOK()) {
-					MessageDialog.openInformation(window.getShell(),
+				PreferenceConstants.FILE_EXTENSIONS);
+		if (exchangeFile != null) {
+			final boolean doIt = MessageDialog
+					.openConfirm(
+							window.getShell(),
 							"Eclipseconfigurator",
-							"Settings successful imported");
+							"Danger!\n Your current settings (all settings and in a global scope) will be overidden\n"
+									+ " with the setting from the imported settings file: "
+									+ exchangeFile.getAbsolutePath());
+
+			if (doIt) {
+
+				IPreferencesService service = Platform.getPreferencesService();
+
+				try {
+					final FileInputStream fileInputStream = new FileInputStream(
+							exchangeFile);
+					final IStatus status = service
+							.importPreferences(fileInputStream);
+
+					if (status.isOK()) {
+						MessageDialog.openInformation(window.getShell(),
+								"Eclipseconfigurator",
+								"Settings successful imported");
+
+					}
+
+				} catch (Exception ex) {
+					Activator.logError(ex, ex.getLocalizedMessage());
 				}
 
-			} catch (Exception ex) {
-				Activator.logError(ex, ex.getLocalizedMessage());
 			}
-
 		}
 		return null;
 	}
