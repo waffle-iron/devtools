@@ -10,6 +10,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -17,6 +18,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import com.github.funthomas424242.eclipseconfigurator.Activator;
 import com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceConstants;
 import com.github.funthomas424242.swtextensions.preferences.FileBrowser;
+import com.github.funthomas424242.swtextensions.preferences.PopUpDialogHelper;
 
 /**
  * Our sample handler extends AbstractHandler, an IHandler base class.
@@ -43,15 +45,18 @@ public class ImportHandler extends AbstractHandler {
 		final File exchangeFile = getImportFile(shell);
 
 		if (exchangeFile != null) {
-			final boolean doIt = MessageDialog
-					.openConfirm(
-							shell,
-							"Eclipseconfigurator",
-							"Danger!\n Your current settings (all settings and in a global scope) will be overidden\n"
-									+ " with the setting from the imported settings file: "
-									+ exchangeFile.getAbsolutePath());
 
-			if (doIt) {
+			final PopUpDialogHelper dialogHelper = new PopUpDialogHelper(shell);
+			final Boolean doIt = dialogHelper
+					.openDangerQuestionDialog(
+							"!!! Danger !!! - Do you will continue?",
+							"Danger!\n\n Your current settings (all settings and in a global scope) will be overidden\n"
+									+ " with the setting from the imported settings file: \n\n"
+									+ exchangeFile.getAbsolutePath()
+									+ "\n\n"
+									+ "Do you will continue?");
+
+			if (Boolean.TRUE.equals(doIt)) {
 
 				IPreferencesService service = Platform.getPreferencesService();
 
@@ -63,7 +68,7 @@ public class ImportHandler extends AbstractHandler {
 
 					if (status.isOK()) {
 						MessageDialog.openInformation(window.getShell(),
-								"Eclipseconfigurator",
+								"Eclipse Configurator",
 								"Settings successful imported");
 
 					}
