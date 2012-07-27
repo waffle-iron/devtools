@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse Configurator
-Bundle-SymbolicName: eclipseconfigurator; singleton:=true
+Bundle-SymbolicName: com.github.funthomas424242.eclipseconfigurator;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.github.funthomas424242.eclipseconfigurator.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: FunThomas424242
