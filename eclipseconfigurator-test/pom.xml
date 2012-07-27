@@ -11,7 +11,7 @@
 
 	<artifactId>eclipseconfigurator-test</artifactId>
 	<packaging>jar</packaging>
-	<name>Eclipse Konfigurator - Cucumber Test</name>
+	<name>Eclipse Configurator - Cucumber Test</name>
 
 	<dependencies>
 		<dependency>

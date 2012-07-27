@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.github.funthomas424242.eclipsetoolset"
-      label="Eclipse Tool Set"
+      label="Eclipse Tool Set Feature"
       version="1.0.0.qualifier"
       provider-name="FunThomas424242">
 

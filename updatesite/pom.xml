@@ -9,11 +9,11 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>com.github.funthomas424242.eclipsetoolset</artifactId>
-	<packaging>eclipse-feature</packaging>
+	<artifactId>com.github.funthomas424242.updatesite</artifactId>
+	<packaging>eclipse-update-site</packaging>
 
-	<name>Eclipse Tool Set Feature</name>
-	<url>https://github.com/FunThomas424242/eclipsetoolset</url>
+	<name>Eclipse Project Update Site</name>
+	<url>https://github.com/FunThomas424242/updatesite</url>
 
 	<dependencies>
 		<dependency>

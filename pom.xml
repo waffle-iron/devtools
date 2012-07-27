@@ -112,6 +112,7 @@
 		<module>eclipseconfigurator/pom.xml</module>
 		<module>eclipseconfigurator-test/pom.xml</module>
 		<module>eclipsetoolset/pom.xml</module>
+		<module>updatesite/pom.xml</module>
 	</modules>
 
 
