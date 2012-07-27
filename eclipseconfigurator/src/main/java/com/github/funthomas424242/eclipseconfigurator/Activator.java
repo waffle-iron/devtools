@@ -1,10 +1,15 @@
 package com.github.funthomas424242.eclipseconfigurator;
 
+import java.io.File;
+
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+
+import com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceConstants;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -94,6 +99,15 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public static ImageDescriptor getImageDescriptor(String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
+	}
+
+	public File getExchangeFilePreference() {
+		final IPreferenceStore pStore = Activator.getDefault()
+				.getPreferenceStore();
+		final String exchangeFilePath = pStore
+				.getString(PreferenceConstants.P_FILE);
+		File exchangeFile = new File(exchangeFilePath);
+		return exchangeFile;
 	}
 
 }

@@ -9,12 +9,12 @@
             id="eclipseconfigurator.commands.category">
       </category>
       <command
-            name="Export Konfiguration"
+            name="Export Preferences"
             categoryId="eclipseconfigurator.commands.category"
             id="eclipseconfigurator.commands.ExportCommand">
       </command>
       <command
-            name="Import Konfiguration"
+            name="Import Preferences"
             categoryId="eclipseconfigurator.commands.category"
             id="eclipseconfigurator.commands.ImportCommand">
       </command>
@@ -100,19 +100,14 @@
    </extension>
    <extension
          point="org.eclipse.ui.preferenceTransfer">
-      <settingsTransfer
-            class="eclipseconfigurator.SettingsTransfer1"
-            id="eclipseconfigurator.settingsTransfer1"
-            name="name">
-         <description>
-            description body text
-         </description>
-      </settingsTransfer>
       <transfer
-            id="eclipseconfigurator.transfer1"
-            name="name">
+            id="eclipseconfigurator.transfer"
+            name="[alpha] All Instance Preferences (Eclipse Configurator) ">
          <mapping
-               scope="eclipseconfigurator.mapping1">
+               scope="instance">
+         </mapping>
+         <mapping
+               scope="project">
          </mapping>
       </transfer>
    </extension>
