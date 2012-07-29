@@ -1,7 +1,7 @@
 eclipseconfigurator
 ===================
 
-Root for all of my eclipse configurator project: 
+Ein Projekt zum Herstellen identischer Entwicklungsumgebungen.
 
 **Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/)
 
