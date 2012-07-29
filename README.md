@@ -21,7 +21,8 @@ Build powered by:
 ![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)
 
 Hosting powered by:
-![GitHub](https://github.com/fluidicon.png)
 
 ![Sourceforge](http://sflogo.sourceforge.net/sflogo.php?group_id=293502&type=8)
+
+![GitHub](https://github.com/fluidicon.png)
 
