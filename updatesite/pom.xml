@@ -9,11 +9,11 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>com.github.funthomas424242.updatesite</artifactId>
-	<packaging>eclipse-update-site</packaging>
+	<artifactId>com.github.funthomas424242.repository</artifactId>
+	<packaging>eclipse-repository</packaging>
 
-	<name>Eclipse Configurator - Update Site</name>
-	<url>https://github.com/FunThomas424242/updatesite</url>
+	<name>Eclipse Configurator - Repository (prev. Update Site)</name>
+	<url>https://github.com/FunThomas424242/repository</url>
 
 	<dependencies>
 		<dependency>
