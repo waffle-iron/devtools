@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="features/com.github.funthomas424242.eclipsetoolset_1.0.0.qualifier.jar" id="com.github.funthomas424242.eclipsetoolset" version="1.0.0.qualifier">
-      <category name="eclipsetools"/>
+      <category name="funthomas424242tools"/>
    </feature>
-   <category-def name="eclipsetools" label="Eclipse Tools"/>
+   <category-def name="funthomas424242tools" label="FunThomas424242 Tools"/>
 </site>
