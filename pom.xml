@@ -35,6 +35,14 @@
 			<id>cukes</id>
 			<url>http://cukes.info/maven</url>
 		</repository>
+		<repository>
+			<id>cloudbees-snapshots</id>
+			<url>http://repository-funthomas424242.forge.cloudbees.com/snapshot/</url>
+		</repository>
+		<repository>
+			<id>cloudbees-releases</id>
+			<url>http://repository-funthomas424242.forge.cloudbees.com/release/</url>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -64,47 +72,47 @@
 				<version>4.8.1</version>
 			</dependency>
 			<dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-deps</artifactId>
-                <scope>provided</scope>
-                <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-core</artifactId>
-               <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-java</artifactId>
-                <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-groovy</artifactId>
-                <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-junit</artifactId>
-                 <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-picocontainer</artifactId>
-                 <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-scala</artifactId>
-                 <version>1.0.11</version>
-            </dependency>
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-html</artifactId>
-                <version>0.2.1</version>
-            </dependency>
-            
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-deps</artifactId>
+				<scope>provided</scope>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-core</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-java</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-groovy</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-junit</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-picocontainer</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-scala</artifactId>
+				<version>1.0.11</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-html</artifactId>
+				<version>0.2.1</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
