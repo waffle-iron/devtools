@@ -12,7 +12,7 @@
 	<artifactId>com.github.funthomas424242.eclipseconfigurator</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-	<name>Eclipse Configurator</name>
+	<name>Eclipse Configurator - Modul</name>
 	<url>https://github.com/FunThomas424242/eclipseconfigurator</url>
 
 	<dependencies>

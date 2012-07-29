@@ -12,7 +12,7 @@
 	<artifactId>com.github.funthomas424242.eclipsetoolset</artifactId>
 	<packaging>eclipse-feature</packaging>
 
-	<name>Eclipse Tool Set Feature</name>
+	<name>Eclipse Configurator - Feature</name>
 	<url>https://github.com/FunThomas424242/eclipsetoolset</url>
 
 	<dependencies>

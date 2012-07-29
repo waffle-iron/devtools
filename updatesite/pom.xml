@@ -12,7 +12,7 @@
 	<artifactId>com.github.funthomas424242.updatesite</artifactId>
 	<packaging>eclipse-update-site</packaging>
 
-	<name>Eclipse Project Update Site</name>
+	<name>Eclipse Configurator - Update Site</name>
 	<url>https://github.com/FunThomas424242/updatesite</url>
 
 	<dependencies>
