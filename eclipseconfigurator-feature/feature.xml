@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.github.funthomas424242.eclipsetoolset"
+      id="com.github.funthomas424242.eclipseconfigurator-feature"
       label="Eclipse Configurator Feature"
       version="1.0.0.qualifier"
       provider-name="FunThomas424242">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="http://funthomas424242.github.com/eclipseconfigurator/">
+      Plugins to exchange preferences of eclipse plugins.
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      LGPL v2.0 and ff.
+   <copyright url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">
+      copyleft by LGPL v2.1 and updated versions.
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">
+      LGPL v2.1 and updated versions.
    </license>
+
+   <url>
+      <discovery label="GitHub Eclipse Repository" url="https://github.com/downloads/FunThomas424242/eclipseconfigurator/eclipseconfigurator-repository.zip"/>
+   </url>
 
    <plugin
          id="com.github.funthomas424242.eclipseconfigurator"
