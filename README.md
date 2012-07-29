@@ -1,13 +1,11 @@
-eclipseroot
-===========
+eclipseconfigurator
+===================
 
-Root for all of my eclipse plugins: 
-[EclipseConfigurator](https://github.com/FunThomas424242/eclipseroot/tree/89f3b0e550ce3deb19d87fe664ec95196b6e20b7/eclipseconfigurator),
-[Cucumber Test](https://github.com/FunThomas424242/eclipseroot/tree/master/eclipseconfigurator-test)
+Root for all of my eclipse configurator project: 
 
 **Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/)
 
-**Project Site:** https://github.com/FunThomas424242/eclipseroot
+**Project Site:** https://github.com/FunThomas424242/eclipseconfigurator
 
 Maven Repositories
 ------------------
