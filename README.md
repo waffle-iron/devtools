@@ -14,13 +14,15 @@ Maven Repositories
 
 **Release**: https://repository-funthomas424242.forge.cloudbees.com/release/
 
-Build powered by:
+Build powered by
+----------------
 
 ![Maven](http://maven.apache.org/images/logos/maven-feather.png)
 
 ![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)
 
-Hosting powered by:
+Hosting powered by
+------------------
 
 ![Sourceforge](http://sflogo.sourceforge.net/sflogo.php?group_id=293502&type=8)
 
