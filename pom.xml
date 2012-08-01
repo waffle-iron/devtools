@@ -7,10 +7,19 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Eclipse Configurator - Parent</name>
-	<url>https://github.com/FunThomas424242/eclipseconfigurator</url>
+	<name>Eclipse Configurator</name>
+	<url>https://github.com/funthomas424242/eclipseconfigurator</url>
+
+
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+
 
 	<properties>
+		<user.jdk-version>1.6</user.jdk-version>
+		<github.global.userName>${env.gituser}</github.global.userName>
+		<github.global.password>${env.gitpassword}</github.global.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.tycho.version>0.12.0</project.build.tycho.version>
 	</properties>
@@ -52,6 +61,63 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+
+
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>Issue</system>
+		<url>https://github.com/funthomas424242/eclipseconfigurator/issues</url>
+	</issueManagement>
+
+	<distributionManagement>
+		<downloadUrl>https://github.com/FunThomas424242/eclipseconfigurator/downloads</downloadUrl>
+		<snapshotRepository>
+			<id>cloudbees-snapshots</id>
+			<name>Snapshot Repository at CloudBees</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>https://repository-funthomas424242.forge.cloudbees.com/snapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<id>cloudbees-releases</id>
+			<name>Release Repository at CloudBees</name>
+			<uniqueVersion>false</uniqueVersion>
+			<url>https://repository-funthomas424242.forge.cloudbees.com/release/</url>
+		</repository>
+	</distributionManagement>
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE v2.1</name>
+			<url>lgpl-2.1.txt</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+
+
+	<scm>
+		<url>https://github.com/FunThomas424242/eclipseconfigurator</url>
+		<connection>scm:git:git://github.com/funthomas424242/eclipseconfigurator.git</connection>
+		<developerConnection>scm:git:git@github.com:funthomas424242/eclipseconfigurator.git</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>tmichel</id>
+			<name>Thomas Schubert</name>
+			<email>funthomas424242@googlemail.com</email>
+			<timezone>+1</timezone>
+			<organization>The world wide open source community</organization>
+			<organizationUrl>http://sourceforge.net</organizationUrl>
+			<roles>
+				<role>project admin</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
 
 
 	<dependencyManagement>
@@ -117,12 +183,11 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>eclipseconfigurator-modul/pom.xml</module>
-		<module>eclipseconfigurator-test/pom.xml</module>
-		<module>eclipseconfigurator-feature/pom.xml</module>
-		<module>updatesite/pom.xml</module>
+		<module>eclipseconfigurator-modul</module>
+		<module>eclipseconfigurator-test</module>
+		<module>eclipseconfigurator-feature</module>
+		<module>updatesite</module>
 	</modules>
-
 
 
 </project>
