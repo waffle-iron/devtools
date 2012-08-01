@@ -5,7 +5,7 @@ Ein Projekt zum Herstellen identischer Entwicklungsumgebungen.
 
 **Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/Eclipse%20Tools/)
 
-**Project Site:** https://github.com/FunThomas424242/eclipseconfigurator
+**Project Site:** http://funthomas424242.github.com/eclipseconfigurator/
 
 Maven Repositories
 ------------------
