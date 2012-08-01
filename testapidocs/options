@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/SchubertT006/git/eclipseconfigurator/eclipseconfigurator-test/target/classes;C:/Users/SchubertT006/git/eclipseconfigurator/eclipseconfigurator-test/target/test-classes;C:/var/m3/info/cukes/cucumber-java/1.0.11/cucumber-java-1.0.11.jar;C:/var/m3/info/cukes/gherkin/2.11.1/gherkin-2.11.1.jar;C:/var/m3/info/cukes/cucumber-junit/1.0.11/cucumber-junit-1.0.11.jar;C:/Users/SchubertT006/git/eclipseconfigurator/eclipseconfigurator-modul/target/com.github.funthomas424242.eclipseconfigurator-1.0.0-SNAPSHOT.jar;C:/var/m3/info/cukes/cucumber-core/1.0.11/cucumber-core-1.0.11.jar;C:/var/m3/info/cukes/cucumber-html/0.2.1/cucumber-html-0.2.1.jar;C:/var/m3/junit/junit/4.8.1/junit-4.8.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/SchubertT006/git/eclipseconfigurator/eclipseconfigurator-test/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2012. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/SchubertT006/git/eclipseconfigurator/eclipseconfigurator-test/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Eclipse Configurator - Cucumber Test 1.0.0-SNAPSHOT Test API'
+-link
+'http://java.sun.com/javase/6/docs/api'
+-use
+-version
+-windowtitle
+'Eclipse Configurator - Cucumber Test 1.0.0-SNAPSHOT Test API'
