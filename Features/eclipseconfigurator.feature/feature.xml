@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.github.funthomas424242.eclipseconfigurator-feature"
+      id="com.github.funthomas424242.eclipseconfigurator.feature"
       label="Eclipse Configurator Feature"
       version="1.0.0.qualifier"
       provider-name="FunThomas424242">
