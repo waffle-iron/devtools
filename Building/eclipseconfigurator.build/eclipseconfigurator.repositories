@@ -1,0 +1,70 @@
+// The git repository at eclpise.org that contains the slideshow example.
+// Use the 'git:' prefix to clone a git repository.
+ 
+// Remote BuildBoost Extensions (FunThomas424242 Mirror)
+git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMF/
+git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMFText/
+git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMFTextExamples/
+git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/JUnit/
+git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/UpdateSite/
+
+// Owned BuildBoost Extensions 
+//git:https://github.com/FunThomas424242/BoostX.git!Extensions/Acceleo/
+ 
+ 
+//Only dependencies without the rootRepository ->duplicate target exception
+//git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
+
+// EMFText
+git:https://github.com/DevBoost/EMFText.git!Core/Access/
+git:https://github.com/DevBoost/EMFText.git!Core/SDK/
+git:https://github.com/DevBoost/EMFText.git!Core/Commons/
+git:https://github.com/DevBoost/EMFText.git!Core/FeaturesCommons/
+git:https://github.com/DevBoost/EMFText.git!Core/License/
+
+// CommentTemplate
+git:https://github.com/DevBoost/CommentTemplate.git!Core/
+// JaMoPP
+git:https://github.com/DevBoost/JaMoPP.git!Core/
+
+// Eclipse 4 Platform 
+//get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/eclipse-platform-4.2-win32-x86_64.zip
+//get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/eclipse-4.2-delta-pack.zip
+//get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/org.eclipse.jdt-4.2.zip
+
+//Eclipse 3.7.2 Platform
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/eclipse-platform-3.7.2-win32.zip
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/eclipse-3.7.2-delta-pack.zip
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/org.eclipse.jdt-3.7.2.zip
+
+// EMF 
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/emf/downloads/drops/2.8.0/R201206080554/emf-xsd-SDK-2.8.0.zip
+// EMF Validation (core plugin and feature)
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation/downloads/drops/1.6.0/R201206271200/emf-validation-runtime-1.6.0.zip!eclipse/plugins/org.eclipse.emf.validation_1.4.0.v20100428-2315.jar
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation/downloads/drops/1.6.0/R201206271200/emf-validation-runtime-1.6.0.zip!eclipse/plugins/org.eclipse.emf.validation.ui_1.3.0.v200901271722.jar
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation/downloads/drops/1.6.0/R201206271200/emf-validation-runtime-1.6.0.zip!eclipse/plugins/org.eclipse.emf.validation.ui.ide_1.3.0.v200901271722.jar
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation/downloads/drops/1.6.0/R201206271200/emf-validation-runtime-1.6.0.zip!eclipse/features/org.eclipse.emf.validation_1.6.0.v20120328-0001-479-9oB56N5BBR6LCA6/feature.xml
+
+//Dependencies for Acceleo
+get:http://repo1.maven.org/maven2/com/google/guava/guava/13.0-rc1/guava-13.0-rc1.jar
+get:http://ftp.halifax.rwth-aachen.de/eclipse//modeling/mdt/ocl/downloads/drops/4.0.1/R201209171739/mdt-ocl-runtime-core-4.0.1.zip
+get:http://mirror.netcologne.de/eclipse//modeling/mdt/uml2/downloads/drops/4.0.1/R201209131441/mdt-uml2-runtime-4.0.1.zip
+get:http://mirror.selfnet.de/eclipse/eclipse/downloads/drops4/R-4.2.1-201209141800/org.eclipse.pde-4.2.1.zip
+//get:http://www.java2s.com/Code/JarDownload/org.eclipse.help/org.eclipse.help.appserver_3.1.400.v20100427.jar.zip
+//get:http://ftp.halifax.rwth-aachen.de/eclipse//modeling/mdt/ocl/downloads/drops/4.0.1/R201209171739/mdt-ocl-CoreSDK-core-4.0.1.zip
+//get:http://ftp.halifax.rwth-aachen.de/eclipse//modeling/m2t/acceleo/downloads/drops/3.3.0/R201205291042/m2t-acceleo-SDK-3.3.0.zip
+//get:http://ftp.halifax.rwth-aachen.de/eclipse//modeling/m2t/acceleo/downloads/drops/3.3.0/R201205291042/m2t-acceleo-runtime-3.3.0.zip
+
+//Acceleo
+//get:http://download.forge.objectweb.org/acceleo/eclipse-galileo-modeling-acceleo-2.8.0.win32.zip
+//get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-runtime.zip
+//get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-sdk.zip
+//get:http://download.forge.objectweb.org/acceleo/eclipse-modeling-indigo-win32.zip
+//git:https://github.com/eclipse/acceleo.git
+get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-SDK-3.3.1.zip!eclipse/plugins/*.jar
+get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-runtime-3.3.1.zip
+
+
+
+// Feedback
+git:https://github.com/DevBoost/Feedback.git!Core/
