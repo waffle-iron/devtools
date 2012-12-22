@@ -1,0 +1,11 @@
+#before_script:
+#  - wget -N http://buildboost.org/build.xml
+  
+jdk:
+  - openjdk6
+#  - openjdk7
+#  - oraclejdk6
+#  - oraclejdk7
+  
+language: java
+script: "ant -DrootRepository='git:https://github.com/FunThomas424242/eclipseconfigurator.git'"
