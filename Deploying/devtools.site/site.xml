@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.github.funthomas424242.eclipseconfigurator.feature_1.0.0.qualifier.jar" id="com.github.funthomas424242.eclipseconfigurator.feature" version="1.0.0.qualifier">
+      <category name="funthomas424242tools"/>
+   </feature>
+   <category-def name="funthomas424242tools" label="FunThomas424242 Tools"/>
+</site>
