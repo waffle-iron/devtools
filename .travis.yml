@@ -8,4 +8,4 @@ jdk:
 #  - oraclejdk7
   
 language: java
-script: "ant -DrootRepository='git:https://github.com/FunThomas424242/eclipseconfigurator.git'"
+script: "ant -DrootRepository='git:https://github.com/FunThomas424242/devtool.git'"
