@@ -8,7 +8,7 @@ import com.github.funthomas424242.eclipseconfigurator.Activator;
 /**
  * Class used to initialize default preference values.
  */
-public class PreferenceInitializer extends AbstractPreferenceInitializer {
+public class WorkgroupPreferenceInitializer extends AbstractPreferenceInitializer {
 
 	/*
 	 * (non-Javadoc)

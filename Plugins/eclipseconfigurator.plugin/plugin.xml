@@ -3,88 +3,6 @@
 <plugin>
 
    <extension
-         point="org.eclipse.ui.commands">
-      <category
-            name="Eclipse Konfigurator Category"
-            id="eclipseconfigurator.commands.category">
-      </category>
-      <command
-            name="Export Preferences"
-            categoryId="eclipseconfigurator.commands.category"
-            id="eclipseconfigurator.commands.ExportCommand">
-      </command>
-      <command
-            name="Import Preferences"
-            categoryId="eclipseconfigurator.commands.category"
-            id="eclipseconfigurator.commands.ImportCommand">
-      </command>
-   </extension>
-   <extension
-         point="org.eclipse.ui.handlers">
-      <handler
-            commandId="eclipseconfigurator.commands.ExportCommand"
-            class="com.github.funthomas424242.eclipseconfigurator.handlers.ExportHandler">
-      </handler>
-      <handler
-            commandId="eclipseconfigurator.commands.ImportCommand"
-            class="com.github.funthomas424242.eclipseconfigurator.handlers.ImportHandler">
-      </handler>
-   </extension>
-   <extension
-         point="org.eclipse.ui.bindings">
-      <key
-            commandId="eclipseconfigurator.commands.ExportCommand"
-            contextId="org.eclipse.ui.contexts.window"
-            sequence="M3+E"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
-      </key>
-       <key
-            commandId="eclipseconfigurator.commands.ImportCommand"
-            contextId="org.eclipse.ui.contexts.window"
-            sequence="M3+I"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
-      </key>
-   </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
-         <menu
-               label="Eclipse Konfigurator"
-               mnemonic="M"
-               id="eclipseconfigurator.menus.KonfiguratorMenu">
-            <command
-                  commandId="eclipseconfigurator.commands.ExportCommand"
-                  mnemonic="E"
-                  id="eclipseconfigurator.menus.ExportCommand">
-            </command>
-            <command
-                  commandId="eclipseconfigurator.commands.ImportCommand"
-                  mnemonic="I"
-                  id="eclipseconfigurator.menus.ImportCommand">
-            </command>
-         </menu>
-      </menuContribution>
-      <menuContribution
-            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
-         <toolbar
-               id="eclipseconfigurator.toolbars.KonfiguratorToolbar">
-            <command
-                  commandId="eclipseconfigurator.commands.ExportCommand"
-                  icon="icons/export16x16.gif"
-                  tooltip="Export Konfiguration"
-                  id="eclipseconfigurator.toolbars.ExportCommand">
-            </command>
-            <command
-                  commandId="eclipseconfigurator.commands.ImportCommand"
-                  icon="icons/import16x16.gif"
-                  tooltip="Import Konfiguration"
-                  id="eclipseconfigurator.toolbars.ImportCommand">
-            </command>
-         </toolbar>
-      </menuContribution>
-   </extension>
-   <extension
          point="org.eclipse.ui.preferencePages">
       <page
             class="com.github.funthomas424242.eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
@@ -92,22 +10,51 @@
             name="Eclipse Configurator">
       </page>
    </extension>
-   <extension
-         point="org.eclipse.core.runtime.preferences">
-      <initializer
-            class="com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceInitializer">
-      </initializer>
-   </extension>
+   
    <extension
          point="org.eclipse.ui.preferenceTransfer">
+         
       <transfer
-            id="eclipseconfigurator.transfer"
-            name="[alpha] All Instance Preferences (Eclipse Configurator) ">
+            id="eclipseconfigurator.transfer.m2e"
+            name="[workgroup] m2e Configuration">
+         <description>
+            Export / Import of the m2e Plugin configuration.
+         </description>
          <mapping
                scope="instance">
+            <entry
+                  node="org.eclipse.m2e.core">
+            </entry>
+            <entry
+                  node="org.eclipse.m2e.discovery">
+            </entry> 
          </mapping>
+      </transfer>
+      <transfer
+            id="eclipseconfigurator.transfer.editors"
+            name="[workgroup] editor configuration">
+         <description>
+            Export / Import of the editor configuration.
+         </description>
          <mapping
-               scope="project">
+               scope="instance">
+            <entry
+                  node="org.eclipse.ui.editors">
+            </entry>
+         </mapping>
+      </transfer>
+      
+      <transfer
+            id="eclipseconfigurator.transfer.resources"
+            name="[workgroup] resources configuration">
+         <description>
+            Export / Import of the resources configuration.
+         </description>
+         <mapping
+               scope="instance">
+            <entry
+                  node="org.eclipse.core.resources">
+            </entry>
          </mapping>
       </transfer>
    </extension>
