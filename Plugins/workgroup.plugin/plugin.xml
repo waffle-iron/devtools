@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.github.funthomas424242.eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
+            id="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
+            name="Eclipse Configurator">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferenceTransfer">
+         
+      <transfer
+            id="eclipseconfigurator.transfer.m2e"
+            name="[workgroup] m2e Configuration">
+         <description>
+            Export / Import of the m2e Plugin configuration.
+         </description>
+         <mapping
+               scope="instance">
+            <entry
+                  node="org.eclipse.m2e.core">
+            </entry>
+            <entry
+                  node="org.eclipse.m2e.discovery">
+            </entry> 
+         </mapping>
+      </transfer>
+      <transfer
+            id="eclipseconfigurator.transfer.editors"
+            name="[workgroup] editor configuration">
+         <description>
+            Export / Import of the editor configuration.
+         </description>
+         <mapping
+               scope="instance">
+            <entry
+                  node="org.eclipse.ui.editors">
+            </entry>
+         </mapping>
+      </transfer>
+      
+      <transfer
+            id="eclipseconfigurator.transfer.resources"
+            name="[workgroup] resources configuration">
+         <description>
+            Export / Import of the resources configuration.
+         </description>
+         <mapping
+               scope="instance">
+            <entry
+                  node="org.eclipse.core.resources">
+            </entry>
+         </mapping>
+      </transfer>
+   </extension>
+
+</plugin>
