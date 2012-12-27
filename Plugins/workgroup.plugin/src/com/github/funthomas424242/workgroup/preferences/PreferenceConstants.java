@@ -1,4 +1,4 @@
-package com.github.funthomas424242.eclipseconfigurator.preferences;
+package com.github.funthomas424242.workgroup.preferences;
 
 /**
  * Constant definitions for plug-in preferences

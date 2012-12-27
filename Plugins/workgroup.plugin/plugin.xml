@@ -5,9 +5,9 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="com.github.funthomas424242.eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
-            id="eclipseconfigurator.preferences.EclipseConfiguratorPreferencePage"
-            name="Eclipse Configurator">
+            class="com.github.funthomas424242.workgroup.preferences.WorkgroupPreferencePage"
+            id="workgroup.preferences.WorkgroupPreferencePage"
+            name="Workgroup Preferences">
       </page>
    </extension>
    
@@ -15,8 +15,8 @@
          point="org.eclipse.ui.preferenceTransfer">
          
       <transfer
-            id="eclipseconfigurator.transfer.m2e"
-            name="[workgroup] m2e Configuration">
+            id="workgroup.transfer.m2e"
+            name="[workgroup] m2e configuration">
          <description>
             Export / Import of the m2e Plugin configuration.
          </description>
@@ -31,7 +31,7 @@
          </mapping>
       </transfer>
       <transfer
-            id="eclipseconfigurator.transfer.editors"
+            id="workgroup.transfer.editors"
             name="[workgroup] editor configuration">
          <description>
             Export / Import of the editor configuration.
@@ -45,7 +45,7 @@
       </transfer>
       
       <transfer
-            id="eclipseconfigurator.transfer.resources"
+            id="workgroup.transfer.resources"
             name="[workgroup] resources configuration">
          <description>
             Export / Import of the resources configuration.

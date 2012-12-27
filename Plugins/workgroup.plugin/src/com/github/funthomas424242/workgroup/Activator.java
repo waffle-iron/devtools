@@ -9,7 +9,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
-import com.github.funthomas424242.eclipseconfigurator.preferences.PreferenceConstants;
+import com.github.funthomas424242.workgroup.preferences.PreferenceConstants;
 
 /**
  * The activator class controls the plug-in life cycle
