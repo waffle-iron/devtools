@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Workgroup Plugin
-Bundle-SymbolicName: com.github.funthomas424242.eclipseconfigurator;singleton:=true
+Bundle-SymbolicName: com.github.funthomas424242.workgroup;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.github.funthomas424242.workgroup.Activator
 Require-Bundle: org.eclipse.ui,

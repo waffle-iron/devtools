@@ -7,7 +7,7 @@ import cucumber.annotation.en.When;
 
 import java.util.Date;
 
-import com.github.funthomas424242.eclipseconfigurator.Activator;
+import com.github.funthomas424242.workgroup.Activator;
 
 import static org.junit.Assert.assertEquals;
 

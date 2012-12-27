@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.github.funthomas424242.eclipseconfigurator.feature"
-      label="Eclipse Configurator Feature"
+      id="com.github.funthomas424242.workgroup.feature"
+      label="Workgroup Feature"
       version="1.0.0.qualifier"
       provider-name="FunThomas424242">
 
-   <description url="http://funthomas424242.github.com/eclipseconfigurator/">
+   <description url="http://funthomas424242.github.com/workgroup/">
       Plugins to exchange preferences of eclipse plugins.
    </description>
 
@@ -18,11 +18,11 @@
    </license>
 
    <url>
-      <discovery label="GitHub Eclipse Repository" url="https://github.com/downloads/FunThomas424242/eclipseconfigurator/eclipseconfigurator-repository.zip"/>
+      <discovery label="GitHub Eclipse Repository" url="https://github.com/downloads/FunThomas424242/devtools/workgroup-repository.zip"/>
    </url>
 
    <plugin
-         id="com.github.funthomas424242.eclipseconfigurator"
+         id="com.github.funthomas424242.workgroup"
          download-size="0"
          install-size="0"
          version="0.0.0"
