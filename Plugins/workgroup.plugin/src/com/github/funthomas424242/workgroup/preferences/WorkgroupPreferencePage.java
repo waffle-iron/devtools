@@ -20,10 +20,10 @@ import com.github.funthomas424242.workgroup.Activator;
  * preferences can be accessed directly via the preference store.
  */
 
-public class EclipseConfiguratorPreferencePage extends
+public class WorkgroupPreferencePage extends
 		FieldEditorPreferencePage implements IWorkbenchPreferencePage {
 
-	public EclipseConfiguratorPreferencePage() {
+	public WorkgroupPreferencePage() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
 		setDescription("Preferences of the Eclipse Configurator");
