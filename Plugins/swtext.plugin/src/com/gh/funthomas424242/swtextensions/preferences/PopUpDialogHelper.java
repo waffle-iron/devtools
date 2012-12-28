@@ -1,4 +1,4 @@
-package com.github.funthomas424242.swtextensions.preferences;
+package com.gh.funthomas424242.swtextensions.preferences;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;

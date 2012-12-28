@@ -1,12 +1,10 @@
 package com.github.funthomas424242.workgroup.preferences;
 
-import org.eclipse.jface.preference.*;
-import org.eclipse.swt.SWT;
-import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.internal.wizards.preferences.PreferencesContentProvider;
+import org.eclipse.ui.IWorkbenchPreferencePage;
 
-import com.github.funthomas424242.swtextensions.preferences.NewFileFieldEditor;
+import com.gh.funthomas424242.swtextensions.preferences.NewFileFieldEditor;
 import com.github.funthomas424242.workgroup.Activator;
 
 /**
@@ -20,8 +18,9 @@ import com.github.funthomas424242.workgroup.Activator;
  * preferences can be accessed directly via the preference store.
  */
 
-public class WorkgroupPreferencePage extends
-		FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+public class WorkgroupPreferencePage extends FieldEditorPreferencePage
+		implements
+			IWorkbenchPreferencePage {
 
 	public WorkgroupPreferencePage() {
 		super(GRID);
@@ -34,6 +33,7 @@ public class WorkgroupPreferencePage extends
 	 * GUI blocks needed to manipulate various types of preferences. Each field
 	 * editor knows how to save and restore itself.
 	 */
+	@Override
 	public void createFieldEditors() {
 		final NewFileFieldEditor exchangeFile = new NewFileFieldEditor(
 				PreferenceConstants.P_FILE, "&Default exchange file:",
@@ -59,6 +59,7 @@ public class WorkgroupPreferencePage extends
 	 * @see
 	 * org.eclipse.ui.IWorkbenchPreferencePage#init(org.eclipse.ui.IWorkbench)
 	 */
+	@Override
 	public void init(IWorkbench workbench) {
 
 	}
