@@ -1,11 +1,11 @@
-package com.github.funthomas424242.workgroup.preferences;
+package com.gh.funthomas424242.workgroup.preferences;
 
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import com.gh.funthomas424242.swtextensions.preferences.NewFileFieldEditor;
-import com.github.funthomas424242.workgroup.Activator;
+import com.gh.funthomas424242.workgroup.Activator;
 
 /**
  * This class represents a preference page that is contributed to the

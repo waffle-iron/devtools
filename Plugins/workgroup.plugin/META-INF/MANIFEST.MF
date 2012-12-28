@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Workgroup Plugin
 Bundle-SymbolicName: com.github.funthomas424242.workgroup;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: com.github.funthomas424242.workgroup.Activator
+Bundle-Activator: com.gh.funthomas424242.workgroup.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  swtext.plugin

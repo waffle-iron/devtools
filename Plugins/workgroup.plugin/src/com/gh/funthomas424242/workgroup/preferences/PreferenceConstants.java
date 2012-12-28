@@ -1,4 +1,4 @@
-package com.github.funthomas424242.workgroup.preferences;
+package com.gh.funthomas424242.workgroup.preferences;
 
 /**
  * Constant definitions for plug-in preferences

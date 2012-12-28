@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="com.github.funthomas424242.workgroup.preferences.WorkgroupPreferencePage"
+            class="com.gh.funthomas424242.workgroup.preferences.WorkgroupPreferencePage"
             id="workgroup.preferences.WorkgroupPreferencePage"
             name="Workgroup Preferences">
       </page>
