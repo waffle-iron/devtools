@@ -15,7 +15,7 @@
          point="org.eclipse.ui.preferenceTransfer">
          
       <transfer
-            icon="icons/export16x16.gif"
+            icon="icons/workgroup-transfer32x32.ico"
             id="workgroup.transfer.m2e"
             name="[workgroup] m2e configuration">
          <description>
@@ -32,7 +32,7 @@
          </mapping>
       </transfer>
       <transfer
-            icon="icons/export16x16.gif"
+            icon="icons/workgroup-transfer32x32.ico"
             id="workgroup.transfer.editors"
             name="[workgroup] editor configuration">
          <description>
@@ -47,7 +47,7 @@
       </transfer>
       
       <transfer
-            icon="icons/export16x16.gif"
+            icon="icons/workgroup-transfer32x32.ico"
             id="workgroup.transfer.resources"
             name="[workgroup] resources configuration">
          <description>
