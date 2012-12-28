@@ -1,4 +1,4 @@
-package com.github.funthomas424242.eclipseutils;
+package com.gh.funthomas424242.eclipseutils;
 
 public class StringEscaper {
 
