@@ -1,0 +1,39 @@
+Version 0.0.11 (Project Development Tools)
+Arrangement
+   Feature Versions
+      - net.sourceforge.devtool.devtoolfeature_0.0.11 
+      - net.sourceforge.devtool.jdosupport.tjdofeature_0.0.3 
+   Plugin Versions
+      - net.sourceforge.devtool.jdosupport.tjdo_0.0.3 
+      - net.sourceforge.devtool.jdosupport.wizards.nl1_0.0.3 
+      - net.sourceforge.devtool.jdosupport.wizards_0.0.3
+      - net.sourceforge.devtool.jdosupport_0.0.10 
+      - net.sourceforge.devtool.jdosupport.lib_0.0.5 
+      - net.sourceforge.devtool_0.0.7
+
+Development Environment
+   - Windows ME
+   - Eclipse3.0M8 
+
+Test Environment
+   - Debian/Linux Kernel 2.4 
+   - Gnome 2
+   - Eclipse3.0M8 GTK 
+New Features
+   - Eclipse3.0M8 Support 
+Other Features
+   - optional installable features for vendor support 
+   - JDO Connector for Triactive JDO (version 0.0.3) 
+   - jdo preference page is ready to use:
+      - support multiple vendor profiles
+      - support directory selection 
+      - support multi selection for jars 
+   - jdo nature for projects is ready to use 
+      - You can add and remove JDO Vendor Profiles to your projects via                 context menu "Add JDO Nature". 
+      - support creation of classpath entries via classpath container
+      - jdo enhancement 
+   - Support implements interface javax.jdo.spi.PersistenceCapable via context menu of a class 
+   - Calling of Triactive JDO enhancer via context menu is added for files (*.jdo) and folders 
+   - Wizzard for creation jdo meta data files (*.jdo) 
+Known Bugs
+   - No support for: inheritance, collection, map or array types.

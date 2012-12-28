@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="@user.plugin.id@"
+   name="%plugin.name"
+   version="@user.plugin.version@"
+   provider-name="%provider.name"
+   class="net.sourceforge.devtool.lib.LibPlugin">
+
+   <runtime>
+      <library name="lib.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/charset-toolkit.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+   </requires>
+
+
+   <extension-point id="editorpages" name="Page Set for Multipage Editor" schema="schema/editorpages.exsd"/>
+
+   <!--extension
+         point="net.sourceforge.devtool.lib.editorpages">
+      <editor
+            id="net.sourceforge.devtool.lib.editor1">
+      </editor>
+      <guipage
+            name="Page1"
+            modelclass="net.sourceforge.devtool.lib.pattern.observer.Subject"
+            class="net.sourceforge.devtool.lib.editors.TestEditor">
+      </guipage>
+      <guipage
+            class="net.sourceforge.devtool.lib.editors.TestEditor"
+            name="Page2"
+            modelclass="net.sourceforge.devtool.lib.pattern.observer.Subject">
+      </guipage>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            default="true"
+            name="Test Multipage Editor"
+            icon="images/jdo03_16x16.png"
+            extensions="jdo"
+            filenames="*.jdo"
+            class="net.sourceforge.devtool.lib.editors.GenericMultipageEditor"
+            id="net.sourceforge.devtool.lib.editor1">
+      </editor>
+   </extension-->
+
+</plugin>
