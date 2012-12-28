@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: %pluginName
+Bundle-SymbolicName: encoding.plugin;singleton=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-ClassPath: encoding.jar
+Bundle-Activator: net.sourceforge.devtool.encoding.EncodingPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ sflib.plugin
+Eclipse-AutoStart: true
+Provide-Package: net.sourceforge.devtool.lib.encoding

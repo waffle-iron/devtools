@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IResource"
+            id="net.sourceforge.devtool.encoding.resourcecontribution">
+         <menu
+               label="Encoding Converter"
+               path="additions"
+               id="net.sourceforge.devtool.encoding.menu.encodingconverter">
+            <separator
+                  name="encodingconvertergroup">
+            </separator>
+         </menu>
+         <action
+               enablesFor="+"
+               label="Convert to UTF-8"
+               class="net.sourceforge.devtool.encoding.popup.actions.ConvertAction"
+               style="push"
+               menubarPath="net.sourceforge.devtool.encoding.menu.encodingconverter/encodingconvertergroup"
+               state="false"
+               id="net.sourceforge.devtool.encoding.actions.convert">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferencePage"
+            category="preferences"
+            name="Encoding Converter"
+            id="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferencePage">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferenceInitializer"/>
+   </extension>
+
+</plugin>
