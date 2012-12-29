@@ -5,9 +5,10 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="devtools.preferences"
             class="com.gh.funthomas424242.workgroup.preferences.WorkgroupPreferencePage"
             id="workgroup.preferences.WorkgroupPreferencePage"
-            name="Workgroup Preferences">
+            name="Workgroup Exchange">
       </page>
    </extension>
    

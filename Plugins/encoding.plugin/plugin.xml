@@ -41,9 +41,10 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="devtools.preferences"
             class="encoding.plugin.preferences.EncodingConverterPreferencePage"
             id="encoding.plugin.preferences.EncodingPreferencePage"
-            name="Encoding Preferences">
+            name="Encoding Converter">
       </page>
    </extension>
    <extension
