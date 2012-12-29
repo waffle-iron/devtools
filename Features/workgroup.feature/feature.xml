@@ -22,7 +22,7 @@
    </url>
 
    <plugin
-         id="com.github.funthomas424242.workgroup"
+         id="workgroup"
          download-size="0"
          install-size="0"
          version="0.0.0"
