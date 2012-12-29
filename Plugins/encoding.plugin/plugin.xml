@@ -5,8 +5,9 @@
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
-            objectClass="org.eclipse.core.resources.IFile"
-            id="encoding.plugin.contribution">
+            adaptable="true"
+            id="encoding.plugin.contribution"
+            objectClass="org.eclipse.core.resources.IResource">
          <menu
                label="Encoding Plugin"
                path="additions"
@@ -22,6 +23,18 @@
                label="Convert to UTF-8"
                menubarPath="encoding.plugin.menu/encodinggroup"
                style="push">
+            <enablement>
+               <or>
+                  <objectClass
+                        name="org.eclipse.core.resources.IFolder">
+                  </objectClass>
+                  <and>
+                     <objectClass
+                           name="org.eclipse.core.resources.IFile">
+                     </objectClass>
+                  </and>
+               </or>
+            </enablement>
          </action>
       </objectContribution>
    </extension>

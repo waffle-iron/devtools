@@ -27,7 +27,7 @@ public class ConvertAction implements IObjectActionDelegate {
 	protected ISelection selection = null;
 
 	/**
-	 * Constructor for Action1.
+	 * Constructor for Action.
 	 */
 	public ConvertAction() {
 		super();
@@ -75,7 +75,8 @@ public class ConvertAction implements IObjectActionDelegate {
 				 * (non-Javadoc)
 				 * 
 				 * @see net.sourceforge.devtool.lib.encoding.EncodingConverter#
-				 * shouldConvert(java.io.File, java.lang.String)
+				 * shouldConvert(java.io.File, java.lang.String,
+				 * java.lang.String)
 				 */
 				@Override
 				protected boolean shouldConvert(File file, String srcCharset,
