@@ -8,7 +8,7 @@ import encoding.plugin.Activator;
 /**
  * Class used to initialize default preference values.
  */
-public class PreferenceInitializer extends AbstractPreferenceInitializer {
+public class PreferenceInitializerN extends AbstractPreferenceInitializer {
 
 	/*
 	 * (non-Javadoc)

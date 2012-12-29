@@ -17,7 +17,7 @@
          </menu>
          <action
                class="encoding.plugin.popup.actions.ConvertAction"
-               enablesFor="1"
+               enablesFor="+"
                id="encoding.plugin.ConvertAction"
                label="Convert to UTF-8"
                menubarPath="encoding.plugin.menu/encodinggroup"
@@ -38,9 +38,6 @@
       <initializer
             class="encoding.plugin.preferences.EncodingConverterPreferenceInitializer">
       </initializer>
-   </extension>
-   <extension
-         point="org.eclipse.equinox.preferences.preferences">
    </extension>
 
 </plugin>

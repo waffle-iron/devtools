@@ -21,11 +21,11 @@ import encoding.plugin.Activator;
  * preferences can be accessed directly via the preference store.
  */
 
-public class EncodingPreferencePage extends FieldEditorPreferencePage
+public class EncodingPreferencePageN extends FieldEditorPreferencePage
 		implements
 			IWorkbenchPreferencePage {
 
-	public EncodingPreferencePage() {
+	public EncodingPreferencePageN() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
 		setDescription("A demonstration of a preference page implementation");
