@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
+<?eclipse version="3.4"?>
 <plugin>
 
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
-            adaptable="true"
             objectClass="org.eclipse.core.resources.IResource"
-            id="net.sourceforge.devtool.encoding.resourcecontribution">
+            id="encoding.plugin.contribution">
          <menu
-               label="Encoding Converter"
+               label="Encoding Plugin"
                path="additions"
-               id="net.sourceforge.devtool.encoding.menu.encodingconverter">
+               id="encoding.plugin.menu">
             <separator
-                  name="encodingconvertergroup">
+                  name="encodinggroup">
             </separator>
          </menu>
          <action
-               enablesFor="+"
+               class="encoding.plugin.popup.actions.ConvertAction"
+               enablesFor="1"
+               id="encoding.plugin.ConvertAction"
                label="Convert to UTF-8"
-               class="net.sourceforge.devtool.encoding.popup.actions.ConvertAction"
-               style="push"
-               menubarPath="net.sourceforge.devtool.encoding.menu.encodingconverter/encodingconvertergroup"
-               state="false"
-               id="net.sourceforge.devtool.encoding.actions.convert">
+               menubarPath="encoding.plugin.menu/encodinggroup"
+               style="push">
          </action>
       </objectContribution>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferencePage"
-            category="preferences"
-            name="Encoding Converter"
-            id="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferencePage">
+            class="encoding.plugin.preferences.EncodingConverterPreferencePage"
+            id="encoding.plugin.preferences.EncodingPreferencePage"
+            name="Encoding Preferences">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
-      <initializer class="net.sourceforge.devtool.encoding.preferences.EncodingConverterPreferenceInitializer"/>
+      <initializer
+            class="encoding.plugin.preferences.EncodingConverterPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.preferences.preferences">
    </extension>
 
 </plugin>

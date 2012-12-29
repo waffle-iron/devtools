@@ -1,4 +1,4 @@
-package net.sourceforge.devtool.lib.encoding;
+package encoding.plugin.encoding;
 
 /**
  * 
@@ -67,9 +67,9 @@ public class EncodingConverter {
 	}
 
 	/**
-	 * Ermittelt zu allen Pfadangaben im übergebenen Stack rekursiv
+	 * Ermittelt zu allen Pfadangaben im ï¿½bergebenen Stack rekursiv
 	 * untergeordnete Dateien. Diese werden jeweils eingelesen und dann eine
-	 * Kopie im übergebenen Format (z.B. UTF-8) erzeugt. Die Dateinamen der
+	 * Kopie im ï¿½bergebenen Format (z.B. UTF-8) erzeugt. Die Dateinamen der
 	 * Kopien werden gebildet aus Originalnamen und dem Speicherformat als
 	 * Postfix.
 	 * 
@@ -93,7 +93,7 @@ public class EncodingConverter {
 				// path entry is a directory
 				// list of file and subdirectory names
 				final String[] dirEntries = file.list();
-				// Alle Verzeichniseinträge auf den Stack legen
+				// Alle Verzeichniseintrï¿½ge auf den Stack legen
 				for (int i = 0; i < dirEntries.length; i++) {
 					// skip the current and the parent directory
 					if ("..".equals(dirEntries[i]) || ".".equals(dirEntries[i])) {
@@ -200,11 +200,11 @@ public class EncodingConverter {
 	}
 
 	/**
-	 * Subklassen können hier verschiedene Aktionen durchführen nachdem ein File
+	 * Subklassen kï¿½nnen hier verschiedene Aktionen durchfï¿½hren nachdem ein File
 	 * konvertiert und gespeichert wurde. Vor Aufruf dieser Methode wird
 	 * sichergestellt, dass alle Streams geschlossen sind.
 	 * 
-	 * So könnten die Datein umbenannt bzw. gelöscht werden.
+	 * So kï¿½nnten die Datein umbenannt bzw. gelï¿½scht werden.
 	 * 
 	 * @param srcFile
 	 */
@@ -213,11 +213,11 @@ public class EncodingConverter {
 	}
 
 	/**
-	 * Subklassen können hier verschiedene Aktionen durchführen nachdem ein File
+	 * Subklassen kï¿½nnen hier verschiedene Aktionen durchfï¿½hren nachdem ein File
 	 * konvertiert und gespeichert wurde. Vor Aufruf dieser Methode wird
 	 * sichergestellt, dass alle Streams geschlossen sind.
 	 * 
-	 * So könnten die Datein umbenannt bzw. gelöscht werden.
+	 * So kï¿½nnten die Datein umbenannt bzw. gelï¿½scht werden.
 	 * 
 	 * @param srcFile
 	 * @param trgFile

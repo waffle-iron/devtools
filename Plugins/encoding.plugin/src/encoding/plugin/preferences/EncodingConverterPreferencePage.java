@@ -1,11 +1,12 @@
-package net.sourceforge.devtool.encoding.preferences;
-
-import net.sourceforge.devtool.encoding.EncodingPlugin;
+package encoding.plugin.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+
+import encoding.plugin.Activator;
+import encoding.plugin.i18n.Messages;
 
 /**
  * This class represents a preference page that is contributed to the
@@ -19,11 +20,14 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
  */
 
 public class EncodingConverterPreferencePage extends FieldEditorPreferencePage
-		implements IEncodingConverterPreferenceConstants,
-		IWorkbenchPreferencePage {
+		implements
+
+			IWorkbenchPreferencePage {
 	private BooleanFieldEditor checkBoxJAVA;
 
 	private BooleanFieldEditor checkBoxDTD;
+
+	private BooleanFieldEditor checkBoxTXT;
 
 	private BooleanFieldEditor checkBoxCSS;
 
@@ -35,7 +39,7 @@ public class EncodingConverterPreferencePage extends FieldEditorPreferencePage
 
 	public EncodingConverterPreferencePage() {
 		super(GRID);
-		setPreferenceStore(EncodingPlugin.getDefault().getPreferenceStore());
+		setPreferenceStore(Activator.getDefault().getPreferenceStore());
 		setDescription(Messages.getString("EncodingConverterPreferencePage.0")); //$NON-NLS-1$
 		setTitle(Messages.getString("EncodingConverterPreferencePage.1")); //$NON-NLS-1$
 	}
@@ -46,42 +50,63 @@ public class EncodingConverterPreferencePage extends FieldEditorPreferencePage
 	 * editor knows how to save and restore itself.
 	 */
 
+	@Override
 	public void createFieldEditors() {
-		checkBoxALL = new BooleanFieldEditor(P_ALL_FILES, Messages.getString("EncodingConverterPreferencePage.2"), //$NON-NLS-1$
+		checkBoxALL = new BooleanFieldEditor(
+				EncodingConverterPreferenceConstants.P_ALL_FILES,
+				Messages.getString("EncodingConverterPreferencePage.2"), //$NON-NLS-1$
 				getFieldEditorParent());
 		addField(checkBoxALL);
 
 		{
-			checkBoxJSP = new BooleanFieldEditor(P_JSP_FILES, Messages.getString("EncodingConverterPreferencePage.3"), //$NON-NLS-1$
+			checkBoxJSP = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_JSP_FILES,
+					Messages.getString("EncodingConverterPreferencePage.3"), //$NON-NLS-1$
 					getFieldEditorParent());
 			addField(checkBoxJSP);
 		}
 
 		{
-			checkBoxXML = new BooleanFieldEditor(P_XML_FILES, Messages.getString("EncodingConverterPreferencePage.4"), //$NON-NLS-1$
+			checkBoxXML = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_XML_FILES,
+					Messages.getString("EncodingConverterPreferencePage.4"), //$NON-NLS-1$
 					getFieldEditorParent());
 			addField(checkBoxXML);
 		}
 
 		{
-			checkBoxCSS = new BooleanFieldEditor(P_CSS_FILES, Messages.getString("EncodingConverterPreferencePage.5"), //$NON-NLS-1$
+			checkBoxCSS = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_CSS_FILES,
+					Messages.getString("EncodingConverterPreferencePage.5"), //$NON-NLS-1$
 					getFieldEditorParent());
 			addField(checkBoxCSS);
 		}
 
 		{
-			checkBoxDTD = new BooleanFieldEditor(P_DTD_FILES, Messages.getString("EncodingConverterPreferencePage.6"), //$NON-NLS-1$
+			checkBoxDTD = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_DTD_FILES,
+					Messages.getString("EncodingConverterPreferencePage.6"), //$NON-NLS-1$
 					getFieldEditorParent());
 			addField(checkBoxDTD);
 		}
 
 		{
-			checkBoxJAVA = new BooleanFieldEditor(P_JAVA_FILES, Messages.getString("EncodingConverterPreferencePage.7"), //$NON-NLS-1$
+			checkBoxJAVA = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_JAVA_FILES,
+					Messages.getString("EncodingConverterPreferencePage.7"), //$NON-NLS-1$
 					getFieldEditorParent());
 			addField(checkBoxJAVA);
 		}
+		{
+			checkBoxTXT = new BooleanFieldEditor(
+					EncodingConverterPreferenceConstants.P_TXT_FILES,
+					Messages.getString("EncodingConverterPreferencePage.8"), //$NON-NLS-1$
+					getFieldEditorParent());
+			addField(checkBoxTXT);
+		}
 	}
 
+	@Override
 	public void init(IWorkbench workbench) {
 	}
 }

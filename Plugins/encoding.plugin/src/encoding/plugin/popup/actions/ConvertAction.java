@@ -1,4 +1,4 @@
-package net.sourceforge.devtool.encoding.popup.actions;
+package encoding.plugin.popup.actions;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,8 +6,6 @@ import java.util.Iterator;
 import java.util.Stack;
 import java.util.logging.Level;
 
-import net.sourceforge.devtool.encoding.preferences.EncodingPreferencePageHelper;
-import net.sourceforge.devtool.lib.encoding.EncodingConverter;
 
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.action.IAction;
@@ -16,6 +14,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
+
+import encoding.plugin.encoding.EncodingConverter;
+import encoding.plugin.preferences.EncodingPreferencePageHelper;
 
 public class ConvertAction implements IObjectActionDelegate {
 
