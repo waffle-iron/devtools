@@ -10,12 +10,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.nio.charset.Charset;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.glaforge.i18n.io.CharsetToolkit;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IAdaptable;
 
 /**
  * Diese Klasse wandelt beliebig kodierte Dateien in das UTF8 Format. Die
@@ -32,39 +35,40 @@ public class EncodingConverter {
 	 */
 	final protected Logger logger = Logger.getLogger(getClass().getName());
 
-	/**
-	 * Konvertiert die angegebene Datei bzw. alle Dateien in einem Verzeichnis
-	 * und dessen Unterverzeichnissen in Dateien mit dem angegebenen Format.
-	 * Wird kein Format angegeben wird in UTF-8 gespeichert.
-	 * 
-	 * @param args[0]
-	 *            Quelldatei oder Verzeichnis
-	 * @param args[1]
-	 *            Zielkodiertung (Default UTF-8)
-	 */
-	public static void main(String[] args) {
-
-		String filesystemEntryName = ".";
-		String targetCharset = "UTF-8";
-		switch (args.length) {
-		case 2: {
-			targetCharset = args[1];
-		}
-		case 1: {
-			filesystemEntryName = args[0];
-			break;
-		}
-		default: {
-			System.out
-					.println("Usage: EncodingConverter <dir|file>  [zielkodierung]");
-			System.exit(1);
-		}
-		}
-		final Stack fileStack = new Stack();
-		fileStack.push(filesystemEntryName);
-		final EncodingConverter util = new EncodingConverter();
-		util.convertFilesystemEntries2Charset(fileStack, targetCharset);
-	}
+	// TODO Write a JUnit Test for this code
+	// /**
+	// * Konvertiert die angegebene Datei bzw. alle Dateien in einem Verzeichnis
+	// * und dessen Unterverzeichnissen in Dateien mit dem angegebenen Format.
+	// * Wird kein Format angegeben wird in UTF-8 gespeichert.
+	// *
+	// * @param args
+	// * [0] Quelldatei oder Verzeichnis
+	// * @param args
+	// * [1] Zielkodiertung (Default UTF-8)
+	// */
+	// public static void main(String[] args) {
+	//
+	// String filesystemEntryName = ".";
+	// String targetCharset = "UTF-8";
+	// switch (args.length) {
+	// case 2 : {
+	// targetCharset = args[1];
+	// }
+	// case 1 : {
+	// filesystemEntryName = args[0];
+	// break;
+	// }
+	// default : {
+	// System.out
+	// .println("Usage: EncodingConverter <dir|file>  [zielkodierung]");
+	// System.exit(1);
+	// }
+	// }
+	// final Stack<IAdaptable> fileStack = new Stack<IAdaptable>();
+	// fileStack.push(filesystemEntryName);
+	// final EncodingConverter util = new EncodingConverter();
+	// util.convertFilesystemEntries2Charset(fileStack, targetCharset);
+	// }
 
 	/**
 	 * Ermittelt zu allen Pfadangaben im �bergebenen Stack rekursiv
@@ -79,47 +83,71 @@ public class EncodingConverter {
 	 * @param entryStack
 	 * @param charSet
 	 */
-	public void convertFilesystemEntries2Charset(final Stack entryStack,
-			final String charSet) {
+	public void convertFilesystemEntries2Charset(
+			final Stack<IAdaptable> entryStack, final String charSet) {
 
 		// compute all path entries from stack
 		while (!entryStack.isEmpty()) {
 
-			// get next path entry from stack
-			final String curEntry = (String) entryStack.pop();
-			// make path to file handle
-			final File file = new File(curEntry);
-			if (file.isDirectory()) {
-				// path entry is a directory
-				// list of file and subdirectory names
-				final String[] dirEntries = file.list();
-				// Alle Verzeichniseintr�ge auf den Stack legen
-				for (int i = 0; i < dirEntries.length; i++) {
-					// skip the current and the parent directory
-					if ("..".equals(dirEntries[i]) || ".".equals(dirEntries[i])) {
-						continue;
+			final IAdaptable curEntry = entryStack.pop();
+
+			// // get next path entry from stack
+			// final IFile curFile = (IFile) entryStack.pop();
+			// final String fullPath = curFile.getLocation().toOSString();
+			// // make path to file handle
+			// final File file = new File(fullPath);
+			if (curEntry instanceof IFolder) {
+
+				// push the members to the stack
+				final IFolder curFolder = (IFolder) curEntry;
+				try {
+					final IResource[] dirEntries = curFolder.members();
+					for (int i = 0; i < dirEntries.length; i++) {
+						final String lastSegmentName = dirEntries[i].getName();
+
+						// skip the current and the parent directory
+						if ("..".equals(lastSegmentName)
+								|| ".".equals(lastSegmentName)) {
+							continue;
+						}
+
+						// push member to Stack (IFile or IFolder will be
+						// expected)
+						entryStack.push(dirEntries[i]);
 					}
-					// put new path entry onto stack
-					entryStack.push(curEntry + File.separator + dirEntries[i]);
-				}// next entry
+				} catch (CoreException e) {
+					// TODO print out a message
+					// "this resource could not be converted"
+				}
+
 			} else {
+
 				// convert the file
-				if (shouldConvert(file, charSet)) {
-					final File fileCopy = createCopyOfFile(file, charSet);
-					reorganizeSourceFile(file);
-					reorganizeFileCopy(file, fileCopy);
+				try {
+					final IFile curFile = (IFile) curEntry;
+					final String srcCharSet = curFile.getCharset();
+					final String filePath = curFile.getLocation().toOSString();
+					final File file = new File(filePath);
+					if (shouldConvert(file, charSet)) {
+						final File fileCopy = createCopyOfFile(file,
+								srcCharSet, charSet);
+						reorganizeSourceFile(file);
+						reorganizeFileCopy(file, fileCopy);
+					}
+				} catch (CoreException ex) {
+					// TODO print out a message
+					// "this resource could not be read or so on"
 				}
 
 			}
-		}//do until stack is empty
+		}// do until stack is empty
 	}
-
-	public File createCopyOfFile(final File src, final String trgCharSet) {
+	public File createCopyOfFile(final File src, final String srcCharSet,
+			final String trgCharSet) {
 		final String srcFileName = src.getAbsolutePath();
 		InputStreamReader reader = null;
 		BufferedWriter bufferedWriter = null;
 		try {
-			final Charset srcCharSet = CharsetToolkit.guessEncoding(src, 4096);
 			final FileInputStream inStream = new FileInputStream(src);
 			reader = new InputStreamReader(inStream, srcCharSet);
 			final String outFileName = srcFileName + "." + trgCharSet;
@@ -250,4 +278,3 @@ public class EncodingConverter {
 	}
 
 }
-

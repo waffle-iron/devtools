@@ -6,7 +6,9 @@ import java.util.Iterator;
 import java.util.Stack;
 import java.util.logging.Level;
 
-import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -20,7 +22,7 @@ import encoding.plugin.preferences.EncodingPreferencePageHelper;
 
 public class ConvertAction implements IObjectActionDelegate {
 
-	private Shell shell;
+	protected Shell shell;
 
 	protected ISelection selection = null;
 
@@ -40,26 +42,32 @@ public class ConvertAction implements IObjectActionDelegate {
 	}
 
 	/**
+	 * @see IActionDelegate#selectionChanged(IAction, ISelection)
+	 */
+	@Override
+	public void selectionChanged(IAction action, ISelection selection) {
+		this.selection = selection;
+	}
+
+	/**
 	 * @see IActionDelegate#run(IAction)
 	 */
 	@Override
 	public void run(IAction action) {
 		if (selection instanceof IStructuredSelection) {
-			final IStructuredSelection sel = (IStructuredSelection) selection;
+			final IStructuredSelection structSelection = (IStructuredSelection) selection;
 
-			final Stack resourceStack = new Stack();
-			Object obj = null;
-			for (Iterator elem = sel.iterator(); elem.hasNext();) {
+			final Stack<IAdaptable> resourceStack = new Stack<IAdaptable>();
+			for (Iterator<?> elements = structSelection.iterator(); elements
+					.hasNext();) {
 
-				obj = elem.next();
+				final Object obj = elements.next();
 
-				if (obj instanceof IResource) {
-					final IResource resource = (IResource) obj;
-					final String fullPath = resource.getLocation().toOSString();
-					resourceStack.push(fullPath);
-				} // endif( instanceof IProject)
+				if (obj instanceof IFile || obj instanceof IFolder) {
+					resourceStack.push((IAdaptable) obj);
+				}
 
-			} // next selected element
+			} // next contained element
 
 			final EncodingConverter converter = new EncodingConverter() {
 
@@ -84,16 +92,8 @@ public class ConvertAction implements IObjectActionDelegate {
 				}
 			};
 			converter.convertFilesystemEntries2Charset(resourceStack, "UTF-8"); //$NON-NLS-1$
-		} // endif( instanceof IStructuredSelection )
+		}
 
-	}
-
-	/**
-	 * @see IActionDelegate#selectionChanged(IAction, ISelection)
-	 */
-	@Override
-	public void selectionChanged(IAction action, ISelection selection) {
-		this.selection = selection;
 	}
 
 }
