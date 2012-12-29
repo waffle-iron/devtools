@@ -6,11 +6,11 @@ import java.util.Iterator;
 import java.util.Stack;
 import java.util.logging.Level;
 
-
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
@@ -19,6 +19,8 @@ import encoding.plugin.encoding.EncodingConverter;
 import encoding.plugin.preferences.EncodingPreferencePageHelper;
 
 public class ConvertAction implements IObjectActionDelegate {
+
+	private Shell shell;
 
 	protected ISelection selection = null;
 
@@ -32,12 +34,15 @@ public class ConvertAction implements IObjectActionDelegate {
 	/**
 	 * @see IObjectActionDelegate#setActivePart(IAction, IWorkbenchPart)
 	 */
+	@Override
 	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
+		shell = targetPart.getSite().getShell();
 	}
 
 	/**
 	 * @see IActionDelegate#run(IAction)
 	 */
+	@Override
 	public void run(IAction action) {
 		if (selection instanceof IStructuredSelection) {
 			final IStructuredSelection sel = (IStructuredSelection) selection;
@@ -52,18 +57,19 @@ public class ConvertAction implements IObjectActionDelegate {
 					final IResource resource = (IResource) obj;
 					final String fullPath = resource.getLocation().toOSString();
 					resourceStack.push(fullPath);
-				} //endif( instanceof IProject)
+				} // endif( instanceof IProject)
 
-			} //next selected element
+			} // next selected element
 
 			final EncodingConverter converter = new EncodingConverter() {
 
 				/*
 				 * (non-Javadoc)
 				 * 
-				 * @see net.sourceforge.devtool.lib.encoding.EncodingConverter#shouldConvert(java.io.File,
-				 *      java.lang.String)
+				 * @see net.sourceforge.devtool.lib.encoding.EncodingConverter#
+				 * shouldConvert(java.io.File, java.lang.String)
 				 */
+				@Override
 				protected boolean shouldConvert(File file, String trgCharset) {
 					boolean doConvert = super.shouldConvert(file, trgCharset);
 					try {
@@ -85,6 +91,7 @@ public class ConvertAction implements IObjectActionDelegate {
 	/**
 	 * @see IActionDelegate#selectionChanged(IAction, ISelection)
 	 */
+	@Override
 	public void selectionChanged(IAction action, ISelection selection) {
 		this.selection = selection;
 	}
