@@ -10,6 +10,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,6 +86,8 @@ public class EncodingConverter {
 	public void convertFilesystemEntries2Charset(
 			final Stack<IAdaptable> entryStack, final String targetCharSet) {
 
+		final List<IResource> resourcesToRefresh = new ArrayList<IResource>();
+
 		// compute all path entries from stack
 		while (!entryStack.isEmpty()) {
 
@@ -126,6 +131,8 @@ public class EncodingConverter {
 								srcCharSet, targetCharSet);
 						reorganizeSourceFile(file);
 						reorganizeFileCopy(file, fileCopy);
+						curFile.setCharset(targetCharSet, null);
+						resourcesToRefresh.add(curFile);
 					}
 				} catch (CoreException ex) {
 					// TODO print out a message
@@ -134,6 +141,18 @@ public class EncodingConverter {
 
 			}
 		}// do until stack is empty
+
+		// refresh all converted files
+		for (Iterator<IResource> iterator = resourcesToRefresh.iterator(); iterator
+				.hasNext();) {
+			IResource iResource = iterator.next();
+			try {
+				iResource.refreshLocal(IResource.DEPTH_ZERO, null);
+			} catch (CoreException e) {
+				logger.log(Level.SEVERE, e.getLocalizedMessage());
+			}
+
+		}
 	}
 	public File createCopyOfFile(final File src, final String srcCharSet,
 			final String targetCharSet) {
