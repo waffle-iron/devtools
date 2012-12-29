@@ -21,7 +21,6 @@ import encoding.plugin.i18n.Messages;
 
 public class EncodingConverterPreferencePage extends FieldEditorPreferencePage
 		implements
-
 			IWorkbenchPreferencePage {
 	private BooleanFieldEditor checkBoxJAVA;
 

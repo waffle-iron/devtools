@@ -78,8 +78,10 @@ public class ConvertAction implements IObjectActionDelegate {
 				 * shouldConvert(java.io.File, java.lang.String)
 				 */
 				@Override
-				protected boolean shouldConvert(File file, String trgCharset) {
-					boolean doConvert = super.shouldConvert(file, trgCharset);
+				protected boolean shouldConvert(File file, String srcCharset,
+						String trgCharset) {
+					boolean doConvert = super.shouldConvert(file, srcCharset,
+							trgCharset);
 					try {
 						final String filePath = file.getCanonicalPath();
 						doConvert = filePath

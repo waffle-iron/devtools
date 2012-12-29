@@ -21,10 +21,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
 
 /**
- * Diese Klasse wandelt beliebig kodierte Dateien in das UTF8 Format. Die
- * Erkennung der Kodierung der Quelldatei basiert auf den Verfahren und Klassen
- * von Guillaume LAFORGE
- * (http://glaforge.free.fr/wiki/index.php?wiki=GuessEncoding)
+ * Diese Klasse wandelt beliebig kodierte Dateien in das UTF8 Format.
  * 
  * @author Thomas Michel <development@thomas-michel.info>
  */
@@ -81,21 +78,17 @@ public class EncodingConverter {
 	 * verhindert.
 	 * 
 	 * @param entryStack
-	 * @param charSet
+	 * @param targetCharSet
 	 */
 	public void convertFilesystemEntries2Charset(
-			final Stack<IAdaptable> entryStack, final String charSet) {
+			final Stack<IAdaptable> entryStack, final String targetCharSet) {
 
 		// compute all path entries from stack
 		while (!entryStack.isEmpty()) {
 
+			// get next entry from stack
 			final IAdaptable curEntry = entryStack.pop();
 
-			// // get next path entry from stack
-			// final IFile curFile = (IFile) entryStack.pop();
-			// final String fullPath = curFile.getLocation().toOSString();
-			// // make path to file handle
-			// final File file = new File(fullPath);
 			if (curEntry instanceof IFolder) {
 
 				// push the members to the stack
@@ -128,9 +121,9 @@ public class EncodingConverter {
 					final String srcCharSet = curFile.getCharset();
 					final String filePath = curFile.getLocation().toOSString();
 					final File file = new File(filePath);
-					if (shouldConvert(file, charSet)) {
+					if (shouldConvert(file, srcCharSet, targetCharSet)) {
 						final File fileCopy = createCopyOfFile(file,
-								srcCharSet, charSet);
+								srcCharSet, targetCharSet);
 						reorganizeSourceFile(file);
 						reorganizeFileCopy(file, fileCopy);
 					}
@@ -143,23 +136,23 @@ public class EncodingConverter {
 		}// do until stack is empty
 	}
 	public File createCopyOfFile(final File src, final String srcCharSet,
-			final String trgCharSet) {
+			final String targetCharSet) {
 		final String srcFileName = src.getAbsolutePath();
 		InputStreamReader reader = null;
 		BufferedWriter bufferedWriter = null;
 		try {
 			final FileInputStream inStream = new FileInputStream(src);
 			reader = new InputStreamReader(inStream, srcCharSet);
-			final String outFileName = srcFileName + "." + trgCharSet;
+			final String outFileName = srcFileName + "." + targetCharSet;
 			logger.info("Lese [" + srcCharSet + "]" + srcFileName);
 			final String trgFileName = getFileNameOfCopy(srcFileName,
-					trgCharSet);
+					targetCharSet);
 			final File trgFile = new File(trgFileName);
-			logger.info("Schreibe [" + trgCharSet + "]" + outFileName);
+			logger.info("Schreibe [" + targetCharSet + "]" + outFileName);
 			final FileOutputStream fileOutputStream = new FileOutputStream(
 					trgFile);
 			final OutputStreamWriter writer = new OutputStreamWriter(
-					fileOutputStream, trgCharSet);
+					fileOutputStream, targetCharSet);
 			bufferedWriter = new BufferedWriter(writer);
 			int c = reader.read();
 			while (c != -1) {
@@ -273,8 +266,12 @@ public class EncodingConverter {
 	 *            the encoding to convert into
 	 * @return true the given file encoding will be converted
 	 */
-	protected boolean shouldConvert(final File file, final String trgCharset) {
-		return true;
+	protected boolean shouldConvert(final File file, final String srcCharset,
+			final String trgCharset) {
+		if (srcCharset == null || file == null || !file.exists()) {
+			return false;
+		}
+		return !srcCharset.equals(trgCharset);
 	}
 
 }
