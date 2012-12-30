@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.github.funthomas424242.workgroup.feature"
+      id="workgroup.feature"
       label="Workgroup Feature"
       version="1.0.0.qualifier"
       provider-name="FunThomas424242">
@@ -21,8 +21,13 @@
       <discovery label="GitHub Eclipse Repository" url="https://github.com/downloads/FunThomas424242/devtools/workgroup-repository.zip"/>
    </url>
 
+   <requires>
+      <import feature="devtools.feature" version="1.0.0.qualifier"/>
+      <import feature="swtext.feature" version="1.0.0.qualifier"/>
+   </requires>
+
    <plugin
-         id="workgroup"
+         id="workgroup.plugin"
          download-size="0"
          install-size="0"
          version="0.0.0"
