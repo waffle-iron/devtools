@@ -1,14 +1,15 @@
-devtool
+devtools
 ===================
 
-Sammlung diverser Eclipse Plugins und Features
+Relaunch des alten devtool Projectes von sourceforge.net (http://sourceforge.net/projects/devtool).
+Eine Sammlung diverser Eclipse Plugins und Features.
 
 **Build on Jenkins**: [![Build Status](https://travis-ci.org/FunThomas424242/devtools.png?branch=master)](https://travis-ci.org/FunThomas424242/devtools)
 
 **Project Site:** http://funthomas424242.github.com/devtool/
 
 
-workgroup
+workgroup feature
 -------------------
 
 Ein Projekt zum Herstellen identischer Entwicklungsumgebungen. Es realisiert den Export und Import von ausgewählten (fest vorgegebenen) Preferences.
@@ -28,6 +29,14 @@ Wer mit dieser einfachen Lösung nicht auskommt, dem seien folgende Projekte empf
 
 Sowie eine kleine Lektüre zur Herbeiführung identischer Eclipse Konfigurationen im Arbeitsteam: 
 (http://www.netcetera.com/de/dms/documents/presentations-and-articles/econ2011-pellaton-eclipse-in-teams.pdf)
+
+encoding feature
+-------------------
+
+Kleines Plugin mit dem man mehrere Dateien auf einmal in utf-8 wandeln kann. 
+
+Sie sind ein super Entwickler und doch haben Sie ungewollt viele Dateien im falschen Encoding ins SCM eingecheckt? 
+Dann können Sie diesen Fehler mit dem Plugin schnell wieder korrigieren. 
 
 
 
