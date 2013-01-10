@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/devtools.feature_1.0.0.qualifier.jar" id="devtools.feature" version="1.0.0.qualifier">
+      <category name="funthomas424242devtools"/>
+      <category name="funthomas424242"/>
+   </feature>
+   <feature url="features/encoding.feature_1.0.0.qualifier.jar" id="encoding.feature" version="1.0.0.qualifier">
+      <category name="funthomas424242devtools"/>
+      <category name="funthomas424242"/>
+   </feature>
+   <feature url="features/swtext.feature_1.0.0.qualifier.jar" id="swtext.feature" version="1.0.0.qualifier">
+      <category name="funthomas424242devtools"/>
+      <category name="funthomas424242"/>
+   </feature>
+   <feature url="features/workgroup.feature_1.0.0.qualifier.jar" id="workgroup.feature" version="1.0.0.qualifier">
+      <category name="funthomas424242devtools"/>
+      <category name="funthomas424242"/>
+   </feature>
+   <category-def name="funthomas424242devtools" label="Devtools">
+      <description>
+         Features of the Devtools project founded by FunThomas424242.
+      </description>
+   </category-def>
+   <category-def name="funthomas424242" label="FunThomas424242">
+      <description>
+         All features owned by FunThomas424242.
+      </description>
+   </category-def>
+</site>

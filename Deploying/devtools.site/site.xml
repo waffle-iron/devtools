@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/devtools.feature_1.0.0.201212301509.jar" id="devtools.feature" version="1.0.0.201212301509">
-      <category name="funthomas424242tools"/>
+   <feature url="features/devtools.feature_1.0.0.201301101806.jar" id="devtools.feature" version="1.0.0.201301101806">
+      <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/encoding.feature_1.0.0.201212301509.jar" id="encoding.feature" version="1.0.0.201212301509">
-      <category name="funthomas424242tools"/>
+   <feature url="features/encoding.feature_1.0.0.201301101806.jar" id="encoding.feature" version="1.0.0.201301101806">
+      <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/workgroup.feature_1.0.0.201212301509.jar" id="workgroup.feature" version="1.0.0.201212301509">
-      <category name="funthomas424242tools"/>
+   <feature url="features/workgroup.feature_1.0.0.201301101806.jar" id="workgroup.feature" version="1.0.0.201301101806">
+      <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/swtext.feature_1.0.0.201212301509.jar" id="swtext.feature" version="1.0.0.201212301509">
-      <category name="funthomas424242tools"/>
+   <feature url="features/swtext.feature_1.0.0.201301101806.jar" id="swtext.feature" version="1.0.0.201301101806">
+      <category name="funthomas424242devtools"/>
    </feature>
-   <category-def name="funthomas424242tools" label="FunThomas424242 Tools"/>
+   <category-def name="funthomas424242devtools" label="Devtools">
+      <description>
+         Features of the Devtools project founded by FunThomas.
+      </description>
+   </category-def>
 </site>
