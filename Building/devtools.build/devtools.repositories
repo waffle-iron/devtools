@@ -2,11 +2,11 @@
 // Use the 'git:' prefix to clone a git repository.
  
 // Remote BuildBoost Extensions (FunThomas424242 Mirror)
-git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMF/
-git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMFText/
-git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/EMFTextExamples/
-git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/JUnit/
-git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/UpdateSite/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMF/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFText/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFTextExamples/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/JUnit/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/UpdateSite/
 
 // Owned BuildBoost Extensions 
 //git:https://github.com/FunThomas424242/BoostX.git!Extensions/Acceleo/
