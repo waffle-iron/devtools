@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/devtools.feature_1.0.0.201301101806.jar" id="devtools.feature" version="1.0.0.201301101806">
+   <feature url="features/devtools.feature_1.0.0.201301110000.jar" id="devtools.feature" version="1.0.0.201301110000">
       <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/encoding.feature_1.0.0.201301101806.jar" id="encoding.feature" version="1.0.0.201301101806">
+   <feature url="features/encoding.feature_1.0.0.201301110000.jar" id="encoding.feature" version="1.0.0.201301110000">
       <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/workgroup.feature_1.0.0.201301101806.jar" id="workgroup.feature" version="1.0.0.201301101806">
+   <feature url="features/workgroup.feature_1.0.0.201301110000.jar" id="workgroup.feature" version="1.0.0.201301110000">
       <category name="funthomas424242devtools"/>
    </feature>
-   <feature url="features/swtext.feature_1.0.0.201301101806.jar" id="swtext.feature" version="1.0.0.201301101806">
+   <feature url="features/swtext.feature_1.0.0.201301110000.jar" id="swtext.feature" version="1.0.0.201301110000">
       <category name="funthomas424242devtools"/>
    </feature>
    <category-def name="funthomas424242devtools" label="Devtools">

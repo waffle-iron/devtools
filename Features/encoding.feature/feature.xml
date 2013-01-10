@@ -3,7 +3,8 @@
       id="encoding.feature"
       label="Encoding Feature"
       version="1.0.0.qualifier"
-      provider-name="FunThomas424242">
+      provider-name="FunThomas424242"
+      image="images/encoding_32x32.png">
 
    <description>
       %description
@@ -22,10 +23,10 @@
    </requires>
 
    <plugin
-         id="encoding.plugin"
+         id="encoding.feature"
          download-size="0"
          install-size="0"
-         version="1.0.0.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
