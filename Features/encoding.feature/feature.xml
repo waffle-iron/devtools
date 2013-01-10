@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="encoding.feature"
-      label="%featureName"
+      label="Encoding Feature"
       version="1.0.0.qualifier"
-      provider-name="%providerName">
+      provider-name="FunThomas424242">
 
    <description>
       %description
@@ -13,7 +13,7 @@
       %copyright
    </copyright>
 
-   <license url="%licenseURL">
+   <license url="COPYING.lesser">
       %license
    </license>
 
