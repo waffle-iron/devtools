@@ -61,10 +61,11 @@ get:http://mirror.selfnet.de/eclipse/eclipse/downloads/drops4/R-4.2.1-2012091418
 //get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-sdk.zip
 //get:http://download.forge.objectweb.org/acceleo/eclipse-modeling-indigo-win32.zip
 //git:https://github.com/eclipse/acceleo.git
-get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-SDK-3.3.1.zip!eclipse/plugins/*.jar
-get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-runtime-3.3.1.zip
-
-
+//get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-SDK-3.3.1.zip!eclipse/plugins/*.jar
+//get:http://eclipse.c3sl.ufpr.br/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-runtime-3.3.1.zip
+//get:http://mirror.selfnet.de/eclipse/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-Update-3.3.1.zip
+get:http://mirror.selfnet.de/eclipse/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-SDK-3.3.1.zip!eclipse/plugins/*.jar
+get:http://mirror.selfnet.de/eclipse/modeling/m2t/acceleo/downloads/drops/3.3.1/R201208310923/m2t-acceleo-runtime-3.3.1.zip
 
 // Feedback
 git:https://github.com/DevBoost/Feedback.git!Core/
