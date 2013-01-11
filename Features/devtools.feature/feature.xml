@@ -4,22 +4,26 @@
       label="%featureName"
       version="1.0.0.qualifier"
       provider-name="%providerName"
-      plugin="devtools.branding">
+      plugin="devtools.branding"
+      image="devtool04_32x32.png">
 
-   <description url="README">
-      read the README file
+   <description url="%descriptionUrl">
+      %description
    </description>
 
-   <copyright url="COPYRIGHT">
-      Please read the COPYRIGHT file.
+   <copyright url="%copyrightUrl">
+      %copyright
    </copyright>
 
-   <license url="COPYING.lesser">
+   <license url="%licenseUrl">
       LGPL v2.1 ff.
    </license>
 
    <requires>
       <import feature="swtext.feature" version="1.0.0.qualifier"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="swtext.plugin"/>
    </requires>
 
    <plugin
@@ -30,7 +34,7 @@
          unpack="false"/>
 
    <plugin
-         id="devtools.feature"
+         id="devtools.branding"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="encoding.feature"
-      label="Encoding Feature"
+      label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="FunThomas424242"
-      image="images/encoding_32x32.png">
+      provider-name="%providerName"
+      plugin="encoding.plugin"
+      image="encoding_32x32.jpg">
 
    <description>
       %description
@@ -14,16 +15,19 @@
       %copyright
    </copyright>
 
-   <license url="COPYING.lesser">
+   <license url="licenseUrl">
       %license
    </license>
 
    <requires>
       <import feature="devtools.feature" version="1.0.0.qualifier"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
    </requires>
 
    <plugin
-         id="encoding.feature"
+         id="encoding.plugin"
          download-size="0"
          install-size="0"
          version="0.0.0"

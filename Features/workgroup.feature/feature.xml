@@ -3,17 +3,19 @@
       id="workgroup.feature"
       label="Workgroup Feature"
       version="1.0.0.qualifier"
-      provider-name="FunThomas424242">
+      provider-name="FunThomas424242"
+      plugin="workgroup.plugin"
+      image="workgroup-transfer32x32.ico">
 
-   <description url="http://funthomas424242.github.com/workgroup/">
-      Plugins to exchange preferences of eclipse plugins.
+   <description url="README">
+      Export / Import of Preferences (detailed)
    </description>
 
-   <copyright url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">
-      copyleft by LGPL v2.1 and updated versions.
+   <copyright>
+      created by FunThomas424242
    </copyright>
 
-   <license url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1">
+   <license url="COPYING.lesser">
       LGPL v2.1 and updated versions.
    </license>
 
@@ -24,6 +26,9 @@
    <requires>
       <import feature="devtools.feature" version="1.0.0.qualifier"/>
       <import feature="swtext.feature" version="1.0.0.qualifier"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="swtext.plugin"/>
    </requires>
 
    <plugin

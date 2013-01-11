@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: %featureName
-Bundle-SymbolicName: devtools.feature
+Bundle-Name: Branding Plugin
+Bundle-SymbolicName: devtools.branding
 Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: %providerName
+Bundle-Vendor: FunThomas424242
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
