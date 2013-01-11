@@ -5,17 +5,17 @@
       version="1.0.0.qualifier"
       provider-name="%providerName"
       plugin="encoding.plugin"
-      image="encoding_32x32.jpg">
+      >
 
-   <description>
+   <description url="%descriptionUrl">
       %description
    </description>
 
-   <copyright>
+   <copyright url="%copyrightUrl">
       %copyright
    </copyright>
 
-   <license url="licenseUrl">
+   <license url="%licenseUrl">
       %license
    </license>
 
