@@ -1,9 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Plugin
+Bundle-Name: SWT Extension Feature
 Bundle-SymbolicName: swtext.plugin
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: FunThomas424242
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.ui
 Export-Package: com.gh.funthomas424242.swtextensions.preferences
+

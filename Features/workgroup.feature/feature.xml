@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="workgroup.feature"
-      label="Workgroup Feature"
+      label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="FunThomas424242"
-      plugin="workgroup.plugin"
+      provider-name="%providerName"
       image="workgroup-transfer32x32.ico">
 
-   <description url="README">
-      Export / Import of Preferences (detailed)
+   <description url="%descriptionUrl">
+      %description
    </description>
 
-   <copyright>
-      created by FunThomas424242
+   <copyright url="%copyrightUrl">
+      %copyright
    </copyright>
 
-   <license url="COPYING.lesser">
-      LGPL v2.1 and updated versions.
+   <license url="%licenseUrl">
+      %license
    </license>
 
    <url>

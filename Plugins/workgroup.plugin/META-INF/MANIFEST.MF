@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Workgroup Plugin
+Bundle-Name: %featureName
 Bundle-SymbolicName: workgroup.plugin;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.gh.funthomas424242.workgroup.Activator
@@ -8,5 +8,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  swtext.plugin
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-Vendor: FunThomas424242
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: %projectName
+Bundle-Localization: plugin

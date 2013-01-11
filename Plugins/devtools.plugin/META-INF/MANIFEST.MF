@@ -4,9 +4,10 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: devtools.plugin;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: devtools.plugin.Activator
-Bundle-Vendor: %pluginProviderName
+Bundle-Vendor: %projectName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  swtext.plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
