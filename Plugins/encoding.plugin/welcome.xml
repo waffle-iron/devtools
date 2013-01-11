@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<welcomePage 
+	title="Welcome to the Project Development Tools">
+
+	<intro>This Feature will be support  a set of tools for development of database applications. In a first step this feature 
+	should support helpers for develop applications with JDO access.
+	</intro>
+	
+	<item><b>Update the Feature</b> Please open the update perspective and add a new update site for this plugin.
+	The URL for the update site is: http://devtool.sourceforge.net</item>
+	<item><b>Preference Page</b> This Plugin contribute a peference page named "JDO". Here you can add the 
+	libraries of your jdo provider. The most jdo provider distribute a set of jar files wich must be added to the project 
+	classpath. These files you can put in a list at the JDO preference page.</item>
+	
+	<item><b>JDO Nature</b> If you have a project wich is a application with JDO access, so you can go to the 
+	java perspective and click on the right mouse button. The context menu JDO will be occure. Now you can add
+	or remove the JDO Nature to or from the choose project(s). If you add the JDO nature to a project, the jar files 
+	from the JDO prefenrence page will be added to the project classpath. If you remove the JDO Nature so only the
+	classpath entries wich begins with JDO_  will be removed from the project classpath.</item>
+	
+	<item><b>JDO Descriptor Wizzard</b> If you click on a geen class icon, such as outline of class, then in the JDO
+	context menu you can build a JDO descriptor for the choosen class.</item>
+	
+	<item><b>JDO Enhancement</b>The JSR 12 of Sun (JDO Specification) support 2 methods for a
+	class to implements the JDO contracts. First the class can explizit implements the PersistenceCapable interface or
+	the byte code of class will be enhanced by a enhancer. 
+	The author of this plugin  think: It is a good idea to implements explizit the interface PersistenceCapable and only 
+	enhance the byte code of third party classes. So this plugin support for classes in the JDO context menu a item 
+	to implements the interface PersistenceCapable.</item>
+	
+</welcomePage>
+
+
+
+
+
