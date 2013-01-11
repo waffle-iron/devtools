@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Branding Plugin
+Bundle-Name: Devtool Core Feature
 Bundle-SymbolicName: devtools.branding
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: FunThomas424242
