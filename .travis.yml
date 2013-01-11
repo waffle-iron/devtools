@@ -2,7 +2,7 @@ before_script:
   - wget -N http://buildboost.org/build.xml
   
 jdk:
-  - openjdk7
+  - openjdk6
 #  - openjdk7
 #  - oraclejdk6
 #  - oraclejdk7
