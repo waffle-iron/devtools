@@ -3,9 +3,7 @@
       id="encoding.feature"
       label="%featureName"
       version="1.0.0.qualifier"
-      provider-name="%providerName"
-      plugin="encoding.plugin"
-      >
+      provider-name="%providerName">
 
    <description url="%descriptionUrl">
       %description
@@ -27,7 +25,7 @@
    </requires>
 
    <plugin
-         id="encoding.plugin"
+         id="encoding.feature"
          download-size="0"
          install-size="0"
          version="0.0.0"
