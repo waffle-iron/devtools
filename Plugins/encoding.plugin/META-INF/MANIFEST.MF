@@ -1,12 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
-Bundle-SymbolicName: encoding.feature;singleton:=true
+Bundle-Name: %featureName
+Bundle-SymbolicName: encoding.plugin;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: encoding.plugin.Activator
-Bundle-Vendor: %pluginProviderName
+Bundle-Vendor: %projectName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
+Bundle-Localization: plugin
