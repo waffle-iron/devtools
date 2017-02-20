@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/g8tguy/DevTools.png?label=ready&title=Ready)](https://waffle.io/g8tguy/DevTools)
 devtools
 ===================
 
@@ -12,22 +13,22 @@ Eine Sammlung diverser Eclipse Plugins und Features.
 workgroup feature
 -------------------
 
-Ein Plugin zum Herstellen identischer Entwicklungsumgebungen. Es realisiert den Export und Import von ausgewählten (fest vorgegebenen) Preferences.
-Leider war es nicht möglich die zu exportierenden Preferences dynamisch über eine Preference Page des Plugins festzulegen. Idealerweise kann 
-der Nutzer festlegen von welchen Plugins er die Einstellungen exportieren bzw. importieren möchte. Das ist mit dem aktuellen Eclipse API leider 
-nicht möglich. Daher wurden feste Sets implementiert. Diese können beim Export und Import ausgewählt werden. Aktuell werden unterstützt:
+Ein Plugin zum Herstellen identischer Entwicklungsumgebungen. Es realisiert den Export und Import von ausgewÃ¤hlten (fest vorgegebenen) Preferences.
+Leider war es nicht mÃ¶glich die zu exportierenden Preferences dynamisch Ã¼ber eine Preference Page des Plugins festzulegen. Idealerweise kann 
+der Nutzer festlegen von welchen Plugins er die Einstellungen exportieren bzw. importieren mÃ¶chte. Das ist mit dem aktuellen Eclipse API leider 
+nicht mÃ¶glich. Daher wurden feste Sets implementiert. Diese kÃ¶nnen beim Export und Import ausgewÃ¤hlt werden. Aktuell werden unterstÃ¼tzt:
 * M2E Einstellungen
 * Editor Einstellungen
 * Resources Einstellungen
 
-(Nach Eintragen von Enhancement Requests können gern weitere Sets aufgenommen werden)
+(Nach Eintragen von Enhancement Requests kÃ¶nnen gern weitere Sets aufgenommen werden)
 Ist zu beachten, dass alle Einstellungen nur exportiert werden, wenn sie vom Default Wert abweichen. 
 
-Wer mit dieser einfachen Lösung nicht auskommt, dem seien folgende Projekte empfohlen:
+Wer mit dieser einfachen LÃ¶sung nicht auskommt, dem seien folgende Projekte empfohlen:
 * [Workspace Mechanic] (http://code.google.com/a/eclipselabs.org/p/workspacemechanic/)
 * [Eclipse Team Etceteras] (http://pellaton.github.com/eclipse-team-etceteras/)
 
-Sowie eine kleine Lektüre zur Herbeiführung identischer Eclipse Konfigurationen im Arbeitsteam: 
+Sowie eine kleine LektÃ¼re zur HerbeifÃ¼hrung identischer Eclipse Konfigurationen im Arbeitsteam: 
 (http://www.netcetera.com/de/dms/documents/presentations-and-articles/econ2011-pellaton-eclipse-in-teams.pdf)
 
 encoding feature
@@ -36,7 +37,7 @@ encoding feature
 Kleines Plugin mit dem man mehrere Dateien auf einmal in utf-8 wandeln kann. 
 
 Sie sind ein super Entwickler und doch haben Sie ungewollt viele Dateien im falschen Encoding ins SCM eingecheckt? 
-Dann können Sie diesen Fehler mit dem Plugin schnell wieder korrigieren. 
+Dann kÃ¶nnen Sie diesen Fehler mit dem Plugin schnell wieder korrigieren. 
 
 
 
