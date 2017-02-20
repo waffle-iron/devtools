@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/g8tguy/DevTools.png?label=ready&title=Ready)](https://waffle.io/g8tguy/DevTools)
+[![Stories in Ready](https://badge.waffle.io/g8tguy/DevTools.png?label=ready&title=Ready)](https://waffle.io/g8tguy/DevTools)
 devtools
 ===================
 
